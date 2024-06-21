@@ -26,7 +26,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE313_Cleartext_Storage_in_a_File_or_on_Disk
 {

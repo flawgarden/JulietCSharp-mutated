@@ -16,7 +16,7 @@ Template File: point-flaw-13.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE535_Info_Exposure_Shell_Error
 {

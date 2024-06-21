@@ -23,7 +23,7 @@ using System.IO;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE117_Improper_Output_Neutralization_for_Logs
 {

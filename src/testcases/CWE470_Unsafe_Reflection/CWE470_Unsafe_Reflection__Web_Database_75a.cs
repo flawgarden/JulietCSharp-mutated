@@ -22,7 +22,7 @@ using System.IO;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE470_Unsafe_Reflection
 {

@@ -17,7 +17,7 @@ using TestCaseSupport;
 using System;
 
 using NLog;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE532_Inclusion_of_Sensitive_Info_in_Log
 {

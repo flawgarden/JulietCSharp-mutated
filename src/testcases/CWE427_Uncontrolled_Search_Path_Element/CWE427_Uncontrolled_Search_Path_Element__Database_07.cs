@@ -19,7 +19,7 @@ using System;
 using System.Web;
 using System.Runtime.InteropServices;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE427_Uncontrolled_Search_Path_Element
 {

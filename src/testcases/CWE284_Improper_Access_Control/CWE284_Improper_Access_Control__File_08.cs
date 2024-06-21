@@ -66,7 +66,7 @@ class CWE284_Improper_Access_Control__File_08 : AbstractTestCase
             FileSecurity fSecurity = new FileSecurity();
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Read, AccessControlType.Allow));
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Write, AccessControlType.Deny));
-            File.Create(path, 1024, FileOptions.WriteThrough, fSecurity);
+            File.Create(path, 1024, FileOptions.WriteThrough).SetAccessControl(fSecurity);
         }
     }
 
@@ -81,7 +81,7 @@ class CWE284_Improper_Access_Control__File_08 : AbstractTestCase
             FileSecurity fSecurity = new FileSecurity();
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Read, AccessControlType.Allow));
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Write, AccessControlType.Deny));
-            File.Create(path, 1024, FileOptions.WriteThrough, fSecurity);
+            File.Create(path, 1024, FileOptions.WriteThrough).SetAccessControl(fSecurity);
         }
     }
 

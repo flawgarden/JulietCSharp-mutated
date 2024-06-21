@@ -18,7 +18,7 @@ using System;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE789_Uncontrolled_Mem_Alloc
 {

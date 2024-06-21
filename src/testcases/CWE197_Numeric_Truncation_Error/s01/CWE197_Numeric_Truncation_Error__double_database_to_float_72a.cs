@@ -18,7 +18,7 @@ using TestCaseSupport;
 using System.Collections;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE197_Numeric_Truncation_Error
 {

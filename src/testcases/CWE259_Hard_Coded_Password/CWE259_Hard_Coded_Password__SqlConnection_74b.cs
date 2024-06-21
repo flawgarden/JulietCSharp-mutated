@@ -20,7 +20,7 @@ using System;
 
 using System.IO;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE259_Hard_Coded_Password
 {

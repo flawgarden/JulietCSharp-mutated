@@ -20,7 +20,7 @@ using System;
 using System.Web;
 using System.Text;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE113_HTTP_Response_Splitting
 {

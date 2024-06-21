@@ -22,7 +22,7 @@ using System.IO;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE83_XSS_Attribute
 {

@@ -18,7 +18,7 @@ Template File: sources-sinks-52c.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Security.Cryptography;
 using System.IO;
 using System.Text;

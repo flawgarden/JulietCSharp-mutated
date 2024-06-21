@@ -5,7 +5,7 @@
 
 using TestCaseSupport;
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace testcases.CWE404_Improper_Resource_Shutdown

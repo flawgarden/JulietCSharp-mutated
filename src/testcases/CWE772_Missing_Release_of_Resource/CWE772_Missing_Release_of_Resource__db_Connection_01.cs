@@ -4,7 +4,7 @@
  * */
 
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using TestCaseSupport;
 
 namespace testcases.CWE772_Missing_Release_of_Resource
