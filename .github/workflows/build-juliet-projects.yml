@@ -20,5 +20,5 @@ jobs:
 
     - name: Build projects separately
       run: |
-        find * -type f -name "*.csproj" \
-          -exec dotnet build "{}" \;
+        find * -type f -name "*.csproj" | \
+          xargs -n 1 bash -c 'dotnet build $0 || exit 255'
