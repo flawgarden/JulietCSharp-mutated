@@ -18,7 +18,7 @@ Template File: sources-sinks-81_base.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Web;
 

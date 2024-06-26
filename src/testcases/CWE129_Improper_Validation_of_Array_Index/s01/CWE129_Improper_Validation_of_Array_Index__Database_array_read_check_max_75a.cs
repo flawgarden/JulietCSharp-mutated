@@ -21,7 +21,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE129_Improper_Validation_of_Array_Index
 {

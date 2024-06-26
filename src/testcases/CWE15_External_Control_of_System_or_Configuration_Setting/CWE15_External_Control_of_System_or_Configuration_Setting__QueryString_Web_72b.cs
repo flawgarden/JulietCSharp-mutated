@@ -20,7 +20,7 @@ using System;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE15_External_Control_of_System_or_Configuration_Setting
 {

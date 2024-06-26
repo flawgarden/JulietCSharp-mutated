@@ -18,7 +18,7 @@ Template File: sources-sinks-71a.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE129_Improper_Validation_of_Array_Index
 {

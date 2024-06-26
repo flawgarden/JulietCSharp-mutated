@@ -18,7 +18,7 @@ Template File: sources-sinks-67a.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE190_Integer_Overflow
 {

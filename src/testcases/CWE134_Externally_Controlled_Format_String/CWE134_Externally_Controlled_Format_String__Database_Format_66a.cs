@@ -18,7 +18,7 @@ Template File: sources-sinks-66a.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE134_Externally_Controlled_Format_String
 {

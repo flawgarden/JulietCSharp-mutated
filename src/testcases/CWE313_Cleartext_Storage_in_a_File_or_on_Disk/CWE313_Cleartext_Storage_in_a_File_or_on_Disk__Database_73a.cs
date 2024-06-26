@@ -25,7 +25,7 @@ using System.Text;
 using System.IO;
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE313_Cleartext_Storage_in_a_File_or_on_Disk
 {

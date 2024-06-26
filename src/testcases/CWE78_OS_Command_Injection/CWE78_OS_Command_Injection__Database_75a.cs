@@ -22,7 +22,7 @@ using System.IO;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE78_OS_Command_Injection
 {

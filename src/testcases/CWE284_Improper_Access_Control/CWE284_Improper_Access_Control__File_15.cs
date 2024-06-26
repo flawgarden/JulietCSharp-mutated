@@ -59,7 +59,7 @@ class CWE284_Improper_Access_Control__File_15 : AbstractTestCase
             FileSecurity fSecurity = new FileSecurity();
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Read, AccessControlType.Allow));
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Write, AccessControlType.Deny));
-            File.Create(path, 1024, FileOptions.WriteThrough, fSecurity);
+            File.Create(path, 1024, FileOptions.WriteThrough).SetAccessControl(fSecurity);
             break;
         }
     }
@@ -76,7 +76,7 @@ class CWE284_Improper_Access_Control__File_15 : AbstractTestCase
             FileSecurity fSecurity = new FileSecurity();
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Read, AccessControlType.Allow));
             fSecurity.AddAccessRule(new FileSystemAccessRule(user, FileSystemRights.Write, AccessControlType.Deny));
-            File.Create(path, 1024, FileOptions.WriteThrough, fSecurity);
+            File.Create(path, 1024, FileOptions.WriteThrough).SetAccessControl(fSecurity);
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */

@@ -18,7 +18,7 @@ Template File: sources-sink-81_goodG2B.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 using System.Web;
 

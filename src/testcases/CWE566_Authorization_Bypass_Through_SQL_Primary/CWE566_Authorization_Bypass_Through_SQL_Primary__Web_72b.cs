@@ -20,7 +20,7 @@ using System;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace testcases.CWE566_Authorization_Bypass_Through_SQL_Primary

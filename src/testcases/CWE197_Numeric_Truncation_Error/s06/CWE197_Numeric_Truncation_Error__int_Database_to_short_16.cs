@@ -16,7 +16,7 @@ Template File: sources-sink-16.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE197_Numeric_Truncation_Error
 {

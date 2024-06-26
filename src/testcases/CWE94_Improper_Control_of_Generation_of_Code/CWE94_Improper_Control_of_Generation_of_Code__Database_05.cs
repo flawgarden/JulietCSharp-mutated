@@ -23,7 +23,7 @@ using System.CodeDom.Compiler;
 using System.Text;
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE94_Improper_Control_of_Generation_of_Code
 {

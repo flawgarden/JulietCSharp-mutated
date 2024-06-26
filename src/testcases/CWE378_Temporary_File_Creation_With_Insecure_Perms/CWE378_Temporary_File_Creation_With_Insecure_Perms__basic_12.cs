@@ -58,7 +58,7 @@ class CWE378_Temporary_File_Creation_With_Insecure_Perms__basic_12 : AbstractTes
             {
                 using (StreamWriter sw = new StreamWriter(tempPathG))
                 {
-                    FileSecurity fSecurity = File.GetAccessControl(tempPathG);
+                    FileSecurity fSecurity = (new FileInfo(tempPathG).GetAccessControl());
                     /* FIX: Set file as writable by owner, readable by owner */
                     File.SetAttributes(tempPathG, FileAttributes.Normal);
                     /* Write something to the file */
@@ -91,7 +91,7 @@ class CWE378_Temporary_File_Creation_With_Insecure_Perms__basic_12 : AbstractTes
             {
                 using (StreamWriter sw = new StreamWriter(tempPathG))
                 {
-                    FileSecurity fSecurity = File.GetAccessControl(tempPathG);
+                    FileSecurity fSecurity = (new FileInfo(tempPathG).GetAccessControl());
                     /* FIX: Set file as writable by owner, readable by owner */
                     File.SetAttributes(tempPathG, FileAttributes.Normal);
                     /* Write something to the file */
@@ -118,7 +118,7 @@ class CWE378_Temporary_File_Creation_With_Insecure_Perms__basic_12 : AbstractTes
             {
                 using (StreamWriter sw = new StreamWriter(tempPathG))
                 {
-                    FileSecurity fSecurity = File.GetAccessControl(tempPathG);
+                    FileSecurity fSecurity = (new FileInfo(tempPathG).GetAccessControl());
                     /* FIX: Set file as writable by owner, readable by owner */
                     File.SetAttributes(tempPathG, FileAttributes.Normal);
                     /* Write something to the file */

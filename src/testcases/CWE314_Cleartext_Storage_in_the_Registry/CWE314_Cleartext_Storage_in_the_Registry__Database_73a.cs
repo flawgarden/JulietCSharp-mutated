@@ -25,7 +25,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE314_Cleartext_Storage_in_the_Registry
 {

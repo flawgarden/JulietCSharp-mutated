@@ -19,7 +19,7 @@ using TestCaseSupport;
 using System.Collections;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Web;
 

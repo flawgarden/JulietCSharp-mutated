@@ -19,7 +19,7 @@ using TestCaseSupport;
 using System.Collections;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE129_Improper_Validation_of_Array_Index
 {

@@ -20,7 +20,7 @@ using System;
 
 using System.Web;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE36_Absolute_Path_Traversal
 {

@@ -16,7 +16,7 @@ Template File: point-flaw-07.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.IO;
 using System.Text;
 

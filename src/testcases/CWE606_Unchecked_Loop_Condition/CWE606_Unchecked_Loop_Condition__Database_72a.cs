@@ -19,7 +19,7 @@ using TestCaseSupport;
 using System.Collections;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace testcases.CWE606_Unchecked_Loop_Condition
 {

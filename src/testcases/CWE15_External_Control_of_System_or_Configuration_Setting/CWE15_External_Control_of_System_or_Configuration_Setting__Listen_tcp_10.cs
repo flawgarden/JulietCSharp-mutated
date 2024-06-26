@@ -16,7 +16,7 @@ Template File: sources-sink-10.tmpl.cs
 using TestCaseSupport;
 using System;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 using System.Web;
 
