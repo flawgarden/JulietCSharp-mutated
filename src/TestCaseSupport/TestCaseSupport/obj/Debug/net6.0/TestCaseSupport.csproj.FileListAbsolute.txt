@@ -1,0 +1,11 @@
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/bin/Debug/net6.0/TestCaseSupport.deps.json
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/bin/Debug/net6.0/TestCaseSupport.dll
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/bin/Debug/net6.0/TestCaseSupport.pdb
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.csproj.AssemblyReference.cache
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.GeneratedMSBuildEditorConfig.editorconfig
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.csproj.CoreCompileInputs.cache
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.sourcelink.json
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.dll
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/refint/TestCaseSupport.dll
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/TestCaseSupport.pdb
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/TestCaseSupport/TestCaseSupport/obj/Debug/net6.0/ref/TestCaseSupport.dll

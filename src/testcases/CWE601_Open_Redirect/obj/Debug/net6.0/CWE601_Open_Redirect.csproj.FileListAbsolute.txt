@@ -1,0 +1,4 @@
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/testcases/CWE601_Open_Redirect/obj/Debug/net6.0/CWE601_Open_Redirect.csproj.AssemblyReference.cache
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/testcases/CWE601_Open_Redirect/obj/Debug/net6.0/CWE601_Open_Redirect.GeneratedMSBuildEditorConfig.editorconfig
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/testcases/CWE601_Open_Redirect/obj/Debug/net6.0/CWE601_Open_Redirect.csproj.CoreCompileInputs.cache
+/home/zver/IdeaProjects/vulnomicon/JulietCSharp-fuzz/src/testcases/CWE601_Open_Redirect/obj/Debug/net6.0/CWE601_Open_Redirect.sourcelink.json
