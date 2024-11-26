@@ -1,20 +1,3 @@
-//Original file region: 31, 84, null, null
-//Mutated file region: 51, 112, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_16.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/exceptions/tryCatchFinally with name try_cath_finally_negative
-// Used extensions: ~[EXPR_string@1001]~ -> ~[EXPR_string@1001]~.Trim()
 using System;
 using System.Linq;
 using System.Collections;

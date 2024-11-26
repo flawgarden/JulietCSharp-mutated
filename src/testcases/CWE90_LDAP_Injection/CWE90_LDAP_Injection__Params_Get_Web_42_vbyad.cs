@@ -1,20 +1,3 @@
-//Original file region: 29, 54, null, null
-//Mutated file region: 49, 76, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_42.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/constructors with name class_with_array_initialization_by_value_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

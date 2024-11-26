@@ -1,18 +1,3 @@
-//Original file region: 35, 91, null, null
-//Mutated file region: 52, 111, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/list with name list_to_array_and_get_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

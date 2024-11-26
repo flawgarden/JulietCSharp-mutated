@@ -1,20 +1,3 @@
-//Original file region: 35, 81, null, null
-//Mutated file region: 55, 113, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__Params_Get_Web_45.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/varargs/varargs with name varargs_get_string_with_index_positive
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

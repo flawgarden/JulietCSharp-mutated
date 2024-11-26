@@ -1,20 +1,3 @@
-//Original file region: 29, 56, null, null
-//Mutated file region: 48, 88, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [90, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_12.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/yield with name yield_break_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

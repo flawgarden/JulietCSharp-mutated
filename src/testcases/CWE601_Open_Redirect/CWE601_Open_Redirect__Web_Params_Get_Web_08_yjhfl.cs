@@ -1,20 +1,3 @@
-//Original file region: 41, 78, null, null
-//Mutated file region: 60, 105, null, null
-//CodeQL original results: [601]
-//Snyk original results: [601]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [601]
-//Insider analysis results: [787]
-//Original file name: src/testcases/CWE601_Open_Redirect/CWE601_Open_Redirect__Web_Params_Get_Web_08.cs
-//Original file CWE's: [601]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/unsafe/pointers with name function_pointer_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 31, 76, null, null
-//Mutated file region: 50, 99, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [643, 563]
-//Snyk analysis results: []
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__Params_Get_Web_42.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/actionDelegates with name action_delegate_call_negative_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 31, 66, null, null
-//Mutated file region: 51, 88, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: []
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_31.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/constructors with name class_with_array_initialization_by_value_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

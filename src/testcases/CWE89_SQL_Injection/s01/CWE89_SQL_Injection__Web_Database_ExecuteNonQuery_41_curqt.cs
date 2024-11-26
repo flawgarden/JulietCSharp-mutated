@@ -1,20 +1,3 @@
-//Original file region: 30, 93, null, null
-//Mutated file region: 50, 117, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/pattern-matching/matching with name if_int_pattern_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

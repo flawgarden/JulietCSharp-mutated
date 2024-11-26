@@ -1,20 +1,3 @@
-//Original file region: 31, 83, null, null
-//Mutated file region: 50, 113, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [643, 563]
-//Snyk analysis results: []
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_17.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/conditional/switch with name switch_operator_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

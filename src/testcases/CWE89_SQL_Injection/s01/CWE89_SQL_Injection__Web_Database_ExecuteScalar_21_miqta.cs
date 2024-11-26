@@ -1,22 +1,3 @@
-//Original file region: 33, 95, null, null
-//Mutated file region: 55, 120, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/struct/deconstruction with name record_deconstruction_negative 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/struct/deconstruction with name record_deconstruction_negative
-// Used extensions: ~[MACRO_CreateRecord_Negative@1002]~ -> var ~[MACRO_VarName@1002]~ = new SimpleRecord2(~[CONST_string@1001]~, 0); | ~[MACRO_VarName@1002]~ -> record12321 | ~[MACRO_VarName@1003]~ -> record12321 | ~[MACRO_CreateRecord_Negative@1002]~ -> var ~[MACRO_VarName@1002]~ = new SimpleRecord2(~[CONST_string@1001]~, 0); | ~[MACRO_VarName@1002]~ -> record12321 | ~[MACRO_VarName@1003]~ -> record12321
 using System;
 using System.Linq;
 using System.Collections;

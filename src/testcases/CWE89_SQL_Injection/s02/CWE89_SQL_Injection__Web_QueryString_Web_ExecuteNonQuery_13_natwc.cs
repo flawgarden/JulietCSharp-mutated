@@ -1,18 +1,3 @@
-//Original file region: 30, 81, null, null
-//Mutated file region: 68, 125, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Insider analysis results: [787]
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_QueryString_Web_ExecuteNonQuery_13.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/unsafe/structSerialization with name serialize_struct_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

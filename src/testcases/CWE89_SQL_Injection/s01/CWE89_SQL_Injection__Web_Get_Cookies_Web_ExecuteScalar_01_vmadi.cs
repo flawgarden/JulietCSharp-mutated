@@ -1,20 +1,3 @@
-//Original file region: 30, 66, null, null
-//Mutated file region: 50, 89, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: [89]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_01.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/refargs/refargs with name ref_param_out_negative_2 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

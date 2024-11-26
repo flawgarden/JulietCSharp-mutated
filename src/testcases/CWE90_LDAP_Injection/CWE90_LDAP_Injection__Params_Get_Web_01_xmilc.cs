@@ -1,20 +1,3 @@
-//Original file region: 29, 48, null, null
-//Mutated file region: 49, 70, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [835, 563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_01.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/constructorChains with name constructor_chains_neutral
-// Used extensions: ~[EXPR_bool@1002]~ -> ~[EXPR_string@1]~ != null && ~[EXPR_string@1]~.Contains(~[EXPR_string@1001]~)
 using System;
 using System.Linq;
 using System.Collections;

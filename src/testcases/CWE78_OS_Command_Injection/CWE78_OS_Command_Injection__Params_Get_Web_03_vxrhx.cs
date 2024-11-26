@@ -1,20 +1,3 @@
-//Original file region: 30, 61, null, null
-//Mutated file region: 50, 86, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [835]
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__Params_Get_Web_03.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/operators/operators with name explicit_binary_operator_minus_call_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

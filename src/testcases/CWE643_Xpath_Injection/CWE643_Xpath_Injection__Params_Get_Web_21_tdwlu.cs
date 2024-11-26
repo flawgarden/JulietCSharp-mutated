@@ -1,20 +1,3 @@
-//Original file region: 34, 82, null, null
-//Mutated file region: 55, 108, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [643, 563]
-//Snyk analysis results: []
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__Params_Get_Web_21.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/struct/mutation with name struct_mutation_positive_2 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

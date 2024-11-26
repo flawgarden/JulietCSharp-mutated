@@ -1,20 +1,3 @@
-//Original file region: 44, 75, null, null
-//Mutated file region: 64, 111, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: []
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__Params_Get_Web_08.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/generics/constrainedMethods with name interface_constrained_generic_method_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

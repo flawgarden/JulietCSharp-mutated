@@ -1,20 +1,3 @@
-//Original file region: 30, 69, null, null
-//Mutated file region: 49, 91, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [835, 563]
-//Snyk analysis results: [89]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_42.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/conditional/if with name if_operator_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
