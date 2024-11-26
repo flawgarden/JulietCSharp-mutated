@@ -1,18 +1,3 @@
-//Original file region: 33, 70, null, null
-//Mutated file region: 51, 92, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/map with name map_put_if_absent_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

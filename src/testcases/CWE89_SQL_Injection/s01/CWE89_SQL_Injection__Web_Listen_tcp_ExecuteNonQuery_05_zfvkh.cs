@@ -1,20 +1,3 @@
-//Original file region: 39, 119, null, null
-//Mutated file region: 69, 152, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [460, 459, 404, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_05.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/operators/staticAbstract with name static_abstract_reversed_store_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

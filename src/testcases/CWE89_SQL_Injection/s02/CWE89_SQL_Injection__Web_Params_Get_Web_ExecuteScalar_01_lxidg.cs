@@ -1,20 +1,3 @@
-//Original file region: 30, 58, null, null
-//Mutated file region: 50, 81, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [89]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteScalar_01.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/events/events with name event_call_lambda_neutral 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

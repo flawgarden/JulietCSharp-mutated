@@ -1,18 +1,3 @@
-//Original file region: 32, 91, null, null
-//Mutated file region: 50, 113, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [835, 561]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_03.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/abstract with name abstract_method_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

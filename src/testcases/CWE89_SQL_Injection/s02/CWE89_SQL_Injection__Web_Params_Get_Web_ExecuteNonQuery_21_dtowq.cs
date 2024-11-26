@@ -1,22 +1,3 @@
-//Original file region: 33, 75, null, null
-//Mutated file region: 55, 100, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/virtuality/multiInterface with name multi_interface_negative_1 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/virtuality/multiInterface with name multi_interface_negative_1
-// Used extensions: ~[MACRO_ClassWith2Positive@1001]~ -> var ~[MACRO_VarName@1001]~ = new MultipleInterfaceClass_2Pos(); | ~[MACRO_VarName@1001]~ -> multinterface12 | ~[MACRO_VarName@1002]~ -> multinterface12 | ~[MACRO_ClassWith2Positive@1001]~ -> var ~[MACRO_VarName@1001]~ = new MultipleInterfaceClass_2Pos(); | ~[MACRO_VarName@1001]~ -> multinterface12 | ~[MACRO_VarName@1002]~ -> multinterface12
 using System;
 using System.Linq;
 using System.Collections;

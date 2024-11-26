@@ -1,20 +1,3 @@
-//Original file region: 33, 65, null, null
-//Mutated file region: 53, 90, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__QueryString_Web_45.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/pattern-matching/matching with name switch_int_list_type_pattern_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

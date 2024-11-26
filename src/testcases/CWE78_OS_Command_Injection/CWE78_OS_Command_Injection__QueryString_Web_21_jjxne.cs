@@ -1,20 +1,3 @@
-//Original file region: 34, 78, null, null
-//Mutated file region: 54, 106, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: []
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_21.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/linq with name linq_simple_orderby_thenby_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

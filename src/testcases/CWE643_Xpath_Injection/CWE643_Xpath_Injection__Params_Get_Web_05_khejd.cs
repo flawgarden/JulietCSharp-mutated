@@ -1,20 +1,3 @@
-//Original file region: 37, 88, null, null
-//Mutated file region: 57, 112, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__Params_Get_Web_05.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/field/primaryConstructors with name primary_property_changed_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

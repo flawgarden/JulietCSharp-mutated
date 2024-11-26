@@ -1,22 +1,3 @@
-//Original file region: 30, 88, null, null
-//Mutated file region: 52, 116, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/preprocessor with name MACRO_if_negative 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/preprocessor with name MACRO_if_negative
-// Used extensions: 
 #define SOME_DEFINED
 using System;
 using System.Linq;
@@ -86,7 +67,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01845465 : Abstra
         try
         {
 var tmp42 = data; 
-#if SOME_MACROD
+#if SOME_DEFINED
 data = "";
 #else
 data = tmp42;

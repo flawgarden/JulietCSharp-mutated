@@ -1,20 +1,3 @@
-//Original file region: 31, 75, null, null
-//Mutated file region: 51, 97, null, null
-//CodeQL original results: [601]
-//Snyk original results: [601]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [601, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE601_Open_Redirect/CWE601_Open_Redirect__Web_Params_Get_Web_21.cs
-//Original file CWE's: [601]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/constructors with name string_factory_positive
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 30, 67, null, null
-//Mutated file region: 49, 89, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_10.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/conditional/dowhile with name do_while_operator_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

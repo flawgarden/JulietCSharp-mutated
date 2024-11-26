@@ -1,20 +1,3 @@
-//Original file region: 33, 108, null, null
-//Mutated file region: 52, 130, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [459, 404, 460, 835, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_02.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/anonymous with name tuple_deconstruction_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 35, 87, null, null
-//Mutated file region: 54, 107, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_45.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/string_templates with name simple_formatting_string_templates_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,0 +1,58 @@
+{
+    "original_file_metadata": {
+        "file_name": "src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41.cs",
+        "CWEs": [
+            89
+        ],
+        "kind": "fail",
+        "region": {
+            "start_line": 30,
+            "end_line": 93,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "mutated_file_metadata": {
+        "used_templates": [
+            {
+                "template_file": "sensitivity/generics/constrainedMethods",
+                "template_name": "inheritance_constrained_generic_method_negative"
+            }
+        ],
+        "used_extensions": [],
+        "region": {
+            "start_line": 33,
+            "end_line": 112,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "tool_results": [
+        {
+            "tool_name": "Semgrep",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": [
+                89
+            ]
+        },
+        {
+            "tool_name": "Snyk",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "CodeQL",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "Insider",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        }
+    ]
+}

@@ -1,20 +1,3 @@
-//Original file region: 29, 54, null, null
-//Mutated file region: 49, 78, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [90, 563, 561]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_42.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/abstract with name overridden_accessed_as_abstract_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

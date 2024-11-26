@@ -1,22 +1,3 @@
-//Original file region: 33, 95, null, null
-//Mutated file region: 54, 119, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/anonymous with name tuple_deconstruction_negative 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/abstraction/anonymous with name tuple_deconstruction_negative
-// Used extensions: ~[MACRO_AnonTypeVarName@1001]~ -> anon42342 | ~[MACRO_CreateTupleFirstFixed@1002]~ -> ~[MACRO_CreateSimpleTuple@1001]~ | ~[MACRO_CreateSimpleTuple@1001]~ -> var ~[MACRO_AnonTypeVarName@1002]~ = (~[VAR_string@1]~, ~[CONST_string@1001]~); | ~[MACRO_AnonTypeVarName@1002]~ -> anon42342 | ~[MACRO_AnonTypeVarName@1001]~ -> anon42342 | ~[MACRO_CreateTupleFirstFixed@1002]~ -> ~[MACRO_CreateSimpleTuple@1001]~ | ~[MACRO_CreateSimpleTuple@1001]~ -> var ~[MACRO_AnonTypeVarName@1002]~ = (~[VAR_string@1]~, ~[CONST_string@1001]~); | ~[MACRO_AnonTypeVarName@1002]~ -> anon42342
 using System;
 using System.Linq;
 using System.Collections;

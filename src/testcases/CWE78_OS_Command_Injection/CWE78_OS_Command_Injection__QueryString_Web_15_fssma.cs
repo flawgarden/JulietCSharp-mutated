@@ -1,20 +1,3 @@
-//Original file region: 30, 68, null, null
-//Mutated file region: 49, 100, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [78, 88, 835]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_15.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/yield with name yield_multiple_take_last_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

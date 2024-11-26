@@ -1,20 +1,3 @@
-//Original file region: 30, 66, null, null
-//Mutated file region: 49, 90, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [88, 78]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_12.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/list with name list_union_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

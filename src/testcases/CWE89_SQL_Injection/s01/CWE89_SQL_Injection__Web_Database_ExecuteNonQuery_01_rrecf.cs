@@ -1,22 +1,3 @@
-//Original file region: 30, 88, null, null
-//Mutated file region: 51, 114, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/list with name list_union_positive 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/collections/list with name list_union_positive
-// Used extensions: ~[MACRO_Add_VAR_ToList@1001]~ -> ~[MACRO_ListName@1]~.Add(~[VAR_string@1]~); | ~[MACRO_Create_List@1002]~ -> var ~[MACRO_ListName@1]~ = new List<string>(); | ~[MACRO_ListName@1]~ -> list42 | ~[MACRO_Add_VAR_ToList@1001]~ -> ~[MACRO_ListName@1]~.Add(~[VAR_string@1]~); | ~[MACRO_Create_List@1002]~ -> var ~[MACRO_ListName@1]~ = new List<string>(); | ~[MACRO_ListName@1]~ -> list42
 using System;
 using System.Linq;
 using System.Collections;

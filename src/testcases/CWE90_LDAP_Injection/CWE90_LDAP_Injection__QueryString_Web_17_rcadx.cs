@@ -1,20 +1,3 @@
-//Original file region: 29, 57, null, null
-//Mutated file region: 49, 84, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__QueryString_Web_17.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/events/events with name event_call_lambda_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

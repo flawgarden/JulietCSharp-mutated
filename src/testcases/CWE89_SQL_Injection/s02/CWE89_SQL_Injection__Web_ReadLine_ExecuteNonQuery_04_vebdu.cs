@@ -1,20 +1,3 @@
-//Original file region: 38, 94, null, null
-//Mutated file region: 57, 117, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_ReadLine_ExecuteNonQuery_04.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/actionDelegates with name action_delegate_call_negative_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

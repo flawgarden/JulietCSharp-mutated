@@ -1,20 +1,3 @@
-//Original file region: 31, 88, null, null
-//Mutated file region: 65, 124, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_09.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/generics/constrainedMethods with name interface_constrained_generic_method_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

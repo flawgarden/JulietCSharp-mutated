@@ -1,18 +1,3 @@
-//Original file region: 34, 82, null, null
-//Mutated file region: 52, 105, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Insider analysis results: [787]
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteNonQuery_45.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/unsafe/structPointers with name struct_pointer_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

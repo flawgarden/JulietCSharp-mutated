@@ -1,18 +1,3 @@
-//Original file region: 33, 115, null, null
-//Mutated file region: 51, 136, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [460, 404, 459, 835]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/streams with name stream_map_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

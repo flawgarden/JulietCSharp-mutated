@@ -1,20 +1,3 @@
-//Original file region: 30, 62, null, null
-//Mutated file region: 50, 84, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__QueryString_Web_31.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/extensionMethods with name extension_method_argless_negative_2 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

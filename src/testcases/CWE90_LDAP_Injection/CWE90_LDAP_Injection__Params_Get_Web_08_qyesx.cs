@@ -1,20 +1,3 @@
-//Original file region: 43, 71, null, null
-//Mutated file region: 63, 94, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_08.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/refargs/refargs with name ref_param_negative_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,22 +1,3 @@
-//Original file region: 33, 95, null, null
-//Mutated file region: 54, 119, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/funcDelegates with name ternary_func_call_negative 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/delegates/funcDelegates with name ternary_func_call_negative
-// Used extensions: ~[MACRO_DelegateVar@1003]~ -> delegate0912 | ~[MACRO_FuncTernary_Trd@1004]~ -> Func<~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~> ~[MACRO_DelegateVar@1001]~ = (~[TYPE@1]~ v1, ~[TYPE@1]~ v2, ~[TYPE@1]~ v3) => v3; | ~[MACRO_DelegateVar@1001]~ -> delegate0912 | ~[MACRO_DelegateVar@1003]~ -> delegate0912 | ~[MACRO_FuncTernary_Trd@1004]~ -> Func<~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~> ~[MACRO_DelegateVar@1001]~ = (~[TYPE@1]~ v1, ~[TYPE@1]~ v2, ~[TYPE@1]~ v3) => v3; | ~[MACRO_DelegateVar@1001]~ -> delegate0912
 using System;
 using System.Linq;
 using System.Collections;
