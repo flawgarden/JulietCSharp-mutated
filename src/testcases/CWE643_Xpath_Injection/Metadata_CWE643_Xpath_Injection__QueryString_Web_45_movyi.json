@@ -19,9 +19,7 @@
                 "template_name": "simple_formatting_string_templates_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 37,
             "end_line": 90,

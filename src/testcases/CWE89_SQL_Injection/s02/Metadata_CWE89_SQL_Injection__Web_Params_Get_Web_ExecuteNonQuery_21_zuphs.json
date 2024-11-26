@@ -19,9 +19,7 @@
                 "template_name": "extension_method_one_arg_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 36,
             "end_line": 80,

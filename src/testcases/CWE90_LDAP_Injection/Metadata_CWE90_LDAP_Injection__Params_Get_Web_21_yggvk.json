@@ -19,9 +19,7 @@
                 "template_name": "implicit_binary_operator_minus_call_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 36,
             "end_line": 76,

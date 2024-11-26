@@ -19,9 +19,7 @@
                 "template_name": "ref_param_out_negative_2"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 30,
             "end_line": 76,

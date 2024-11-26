@@ -19,9 +19,7 @@
                 "template_name": "ref_or_and_readonly_field_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 46,
             "end_line": 83,

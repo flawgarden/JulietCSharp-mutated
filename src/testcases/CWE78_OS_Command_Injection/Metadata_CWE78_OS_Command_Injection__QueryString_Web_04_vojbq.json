@@ -19,9 +19,7 @@
                 "template_name": "get_from_anon_method_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 39,
             "end_line": 79,

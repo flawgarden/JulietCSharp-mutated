@@ -19,9 +19,7 @@
                 "template_name": "new_var_assignment_neutral"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 39,
             "end_line": 105,

@@ -19,9 +19,7 @@
                 "template_name": "while_operator_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 32,
             "end_line": 80,

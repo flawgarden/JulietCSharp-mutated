@@ -19,9 +19,7 @@
                 "template_name": "if_int_list_type_pattern_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 38,
             "end_line": 112,

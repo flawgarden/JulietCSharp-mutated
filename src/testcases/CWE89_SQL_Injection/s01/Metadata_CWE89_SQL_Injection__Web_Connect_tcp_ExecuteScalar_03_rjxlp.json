@@ -19,9 +19,7 @@
                 "template_name": "thread_set_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 36,
             "end_line": 104,

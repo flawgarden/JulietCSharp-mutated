@@ -19,9 +19,7 @@
                 "template_name": "struct_mutation_negative_1"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 34,
             "end_line": 86,

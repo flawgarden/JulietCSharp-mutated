@@ -19,9 +19,7 @@
                 "template_name": "try_cath_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 34,
             "end_line": 68,

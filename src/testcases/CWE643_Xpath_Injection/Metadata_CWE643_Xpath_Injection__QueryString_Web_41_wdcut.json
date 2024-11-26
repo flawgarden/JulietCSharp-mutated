@@ -19,9 +19,7 @@
                 "template_name": "map_values_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 34,
             "end_line": 87,

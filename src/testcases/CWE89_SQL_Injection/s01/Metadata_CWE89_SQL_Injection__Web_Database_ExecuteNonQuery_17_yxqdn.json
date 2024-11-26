@@ -19,9 +19,7 @@
                 "template_name": "stream_reduce_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 33,
             "end_line": 102,

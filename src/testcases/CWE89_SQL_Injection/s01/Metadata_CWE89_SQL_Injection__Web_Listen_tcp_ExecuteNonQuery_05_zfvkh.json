@@ -19,9 +19,7 @@
                 "template_name": "static_abstract_reversed_store_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 52,
             "end_line": 135,

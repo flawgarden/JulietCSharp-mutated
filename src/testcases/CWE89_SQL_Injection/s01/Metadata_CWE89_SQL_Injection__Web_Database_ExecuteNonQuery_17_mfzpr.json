@@ -19,9 +19,7 @@
                 "template_name": "nested_field_depth_3_array_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 33,
             "end_line": 102,

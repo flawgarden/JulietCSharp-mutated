@@ -19,9 +19,7 @@
                 "template_name": "array_expand_full_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 29,
             "end_line": 70,

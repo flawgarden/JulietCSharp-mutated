@@ -19,9 +19,7 @@
                 "template_name": "overlapped_struct_fields_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 60,
             "end_line": 115,

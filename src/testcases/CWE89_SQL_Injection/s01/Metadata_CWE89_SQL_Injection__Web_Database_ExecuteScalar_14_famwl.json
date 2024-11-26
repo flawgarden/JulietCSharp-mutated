@@ -19,9 +19,7 @@
                 "template_name": "recursion_simple_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 53,
             "end_line": 119,

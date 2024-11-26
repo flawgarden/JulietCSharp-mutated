@@ -19,9 +19,7 @@
                 "template_name": "action_delegate_call_negative_1"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 33,
             "end_line": 82,

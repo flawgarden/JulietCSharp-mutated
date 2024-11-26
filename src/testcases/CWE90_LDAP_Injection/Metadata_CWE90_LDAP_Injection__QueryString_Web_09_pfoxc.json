@@ -19,9 +19,7 @@
                 "template_name": "do_while_operator_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 31,
             "end_line": 69,

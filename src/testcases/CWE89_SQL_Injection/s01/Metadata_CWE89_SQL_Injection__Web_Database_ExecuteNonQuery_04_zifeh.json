@@ -19,9 +19,7 @@
                 "template_name": "custom_event_call_empty_add_neutral"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 40,
             "end_line": 115,

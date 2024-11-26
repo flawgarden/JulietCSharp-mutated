@@ -19,9 +19,7 @@
                 "template_name": "regex_replace_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 34,
             "end_line": 76,

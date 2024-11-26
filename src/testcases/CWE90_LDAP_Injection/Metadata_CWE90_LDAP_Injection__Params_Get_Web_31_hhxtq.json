@@ -19,9 +19,7 @@
                 "template_name": "impl_binary_op_interface_class1_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 33,
             "end_line": 61,

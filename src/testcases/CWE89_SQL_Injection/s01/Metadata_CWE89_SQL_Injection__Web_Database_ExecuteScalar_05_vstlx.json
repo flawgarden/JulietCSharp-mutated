@@ -19,9 +19,7 @@
                 "template_name": "disposable_interface_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 39,
             "end_line": 111,

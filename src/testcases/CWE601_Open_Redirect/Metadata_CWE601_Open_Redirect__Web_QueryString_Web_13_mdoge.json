@@ -19,9 +19,7 @@
                 "template_name": "linq_simple_groupby_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 30,
             "end_line": 82,

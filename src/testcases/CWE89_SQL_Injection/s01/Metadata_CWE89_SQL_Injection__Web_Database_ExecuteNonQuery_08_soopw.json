@@ -19,9 +19,7 @@
                 "template_name": "regex_replace_with_substitution_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 46,
             "end_line": 118,

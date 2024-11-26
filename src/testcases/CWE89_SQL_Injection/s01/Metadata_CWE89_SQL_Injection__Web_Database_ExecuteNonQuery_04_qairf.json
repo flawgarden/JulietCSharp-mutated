@@ -19,9 +19,7 @@
                 "template_name": "abstract_method_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 40,
             "end_line": 114,

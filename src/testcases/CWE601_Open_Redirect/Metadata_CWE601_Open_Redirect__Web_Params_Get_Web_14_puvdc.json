@@ -19,9 +19,7 @@
                 "template_name": "event_call_lambda_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 30,
             "end_line": 70,

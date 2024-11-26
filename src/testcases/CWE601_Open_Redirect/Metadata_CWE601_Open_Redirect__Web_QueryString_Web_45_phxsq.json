@@ -19,9 +19,7 @@
                 "template_name": "indexer_custom_two_dim_positive_2"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 34,
             "end_line": 78,

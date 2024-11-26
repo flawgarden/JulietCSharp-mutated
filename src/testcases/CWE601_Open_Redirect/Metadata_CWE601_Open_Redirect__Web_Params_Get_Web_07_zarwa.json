@@ -19,9 +19,7 @@
                 "template_name": "binary_action_call_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 35,
             "end_line": 75,

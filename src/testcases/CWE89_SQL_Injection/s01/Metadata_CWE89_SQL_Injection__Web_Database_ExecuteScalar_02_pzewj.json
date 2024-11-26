@@ -19,9 +19,7 @@
                 "template_name": "pattern_matching_simple_1_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 43,
             "end_line": 109,

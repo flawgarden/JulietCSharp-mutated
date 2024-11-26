@@ -19,9 +19,7 @@
                 "template_name": "regex_not_char_group_positive"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 33,
             "end_line": 103,

@@ -19,9 +19,7 @@
                 "template_name": "list_add_get_at_zero_index_empty_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 36,
             "end_line": 100,

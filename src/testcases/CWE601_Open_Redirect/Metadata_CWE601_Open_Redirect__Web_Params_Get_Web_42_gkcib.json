@@ -19,9 +19,7 @@
                 "template_name": "coalescing_assignment_negative"
             }
         ],
-        "used_extensions": [
-            " "
-        ],
+        "used_extensions": [],
         "region": {
             "start_line": 29,
             "end_line": 66,
