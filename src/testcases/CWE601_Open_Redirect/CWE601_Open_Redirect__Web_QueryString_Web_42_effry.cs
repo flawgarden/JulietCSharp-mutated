@@ -1,20 +1,3 @@
-//Original file region: 27, 67, null, null
-//Mutated file region: 47, 96, null, null
-//CodeQL original results: [601]
-//Snyk original results: [601]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [601]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE601_Open_Redirect/CWE601_Open_Redirect__Web_QueryString_Web_42.cs
-//Original file CWE's: [601]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/linq with name linq_simple_join_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

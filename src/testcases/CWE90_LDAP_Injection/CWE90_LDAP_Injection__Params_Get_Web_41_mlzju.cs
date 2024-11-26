@@ -1,20 +1,3 @@
-//Original file region: 29, 52, null, null
-//Mutated file region: 52, 79, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [90, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_41.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/async with name simple_async_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

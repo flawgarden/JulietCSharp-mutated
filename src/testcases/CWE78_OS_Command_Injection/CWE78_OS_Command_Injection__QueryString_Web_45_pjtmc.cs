@@ -1,20 +1,3 @@
-//Original file region: 34, 69, null, null
-//Mutated file region: 74, 110, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: []
-//Snyk analysis results: [78]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_45.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/conditional/recursion with name recursion_mutual_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

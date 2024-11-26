@@ -1,20 +1,3 @@
-//Original file region: 44, 95, null, null
-//Mutated file region: 63, 117, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_ReadLine_ExecuteScalar_08.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/anonymousDelegates with name get_from_argless_delegate_neutral_2 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

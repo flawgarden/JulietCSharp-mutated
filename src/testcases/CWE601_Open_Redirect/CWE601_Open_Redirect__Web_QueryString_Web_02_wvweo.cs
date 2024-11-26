@@ -1,20 +1,3 @@
-//Original file region: 27, 70, null, null
-//Mutated file region: 47, 93, null, null
-//CodeQL original results: [601]
-//Snyk original results: [601]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [835, 563]
-//Snyk analysis results: [601]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE601_Open_Redirect/CWE601_Open_Redirect__Web_QueryString_Web_02.cs
-//Original file CWE's: [601]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/map with name map_simple_get_1_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

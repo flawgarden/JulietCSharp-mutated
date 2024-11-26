@@ -1,20 +1,3 @@
-//Original file region: 30, 56, null, null
-//Mutated file region: 51, 82, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [78, 88]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__Params_Get_Web_41.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/struct/mutation with name struct_mutation_positive_2 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

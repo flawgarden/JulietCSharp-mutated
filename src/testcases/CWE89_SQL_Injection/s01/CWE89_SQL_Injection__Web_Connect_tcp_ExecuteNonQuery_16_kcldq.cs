@@ -1,20 +1,3 @@
-//Original file region: 32, 92, null, null
-//Mutated file region: 52, 114, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Connect_tcp_ExecuteNonQuery_16.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/extensionMethods with name extension_method_argless_negative_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

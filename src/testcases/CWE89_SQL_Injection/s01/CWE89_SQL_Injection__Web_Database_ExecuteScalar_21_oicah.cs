@@ -1,22 +1,3 @@
-//Original file region: 33, 95, null, null
-//Mutated file region: 55, 121, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//CodeQL original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [561]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/abstraction/abstract with name shadowed_accessed_as_abstract_positive 
-//Used extensions: 
-//Program:
-// Mutation info: Insert template from sensitivity/abstraction/abstract with name shadowed_accessed_as_abstract_positive
-// Used extensions: ~[MACRO_CreateInverted@1001]~ -> var ~[MACRO_InstanceName@1001]~ = new ClassInverted(); | ~[MACRO_InstanceName@1001]~ -> abstract999 | ~[MACRO_CreateVirtualized@1002]~ -> AClass ~[MACRO_VirtualizedName@1002]~ = (AClass)~[MACRO_InstanceName@1001]~; | ~[MACRO_VirtualizedName@1002]~ -> virtual666 | ~[MACRO_VirtualizedName@1003]~ -> virtual666 | ~[MACRO_CreateInverted@1001]~ -> var ~[MACRO_InstanceName@1001]~ = new ClassInverted(); | ~[MACRO_InstanceName@1001]~ -> abstract999 | ~[MACRO_CreateVirtualized@1002]~ -> AClass ~[MACRO_VirtualizedName@1002]~ = (AClass)~[MACRO_InstanceName@1001]~; | ~[MACRO_VirtualizedName@1002]~ -> virtual666 | ~[MACRO_VirtualizedName@1003]~ -> virtual666
 using System;
 using System.Linq;
 using System.Collections;

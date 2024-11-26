@@ -1,20 +1,3 @@
-//Original file region: 31, 60, null, null
-//Mutated file region: 50, 82, null, null
-//CodeQL original results: [78]
-//Snyk original results: [78]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [88, 78]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__Params_Get_Web_31.cs
-//Original file CWE's: [78]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/actionDelegates with name binary_action_call_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 30, 70, null, null
-//Mutated file region: 50, 96, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: [563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteScalar_13.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/collections/linq with name linq_simple_select_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

@@ -1,20 +1,3 @@
-//Original file region: 37, 94, null, null
-//Mutated file region: 62, 125, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [643]
-//Insider analysis results: [316, 787]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_05.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/unsafe/pointers with name pointer_addition_negative 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

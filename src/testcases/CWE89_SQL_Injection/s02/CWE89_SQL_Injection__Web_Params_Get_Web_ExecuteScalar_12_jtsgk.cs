@@ -1,20 +1,3 @@
-//Original file region: 30, 96, null, null
-//Mutated file region: 50, 118, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//CodeQL analysis results: []
-//Snyk analysis results: [89]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteScalar_12.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/constructors with name class_with_array_initialization_by_value_neutral
-// Used extensions: ~[MACRO_Zero_Or_One@1001]~ -> 1 | ~[MACRO_Zero_Or_One@1001]~ -> 1
 using System;
 using System.Linq;
 using System.Collections;

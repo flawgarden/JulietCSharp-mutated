@@ -1,20 +1,3 @@
-//Original file region: 29, 57, null, null
-//Mutated file region: 48, 79, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [90, 563]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_11.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/anonymousDelegates with name get_from_argless_delegate_neutral_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

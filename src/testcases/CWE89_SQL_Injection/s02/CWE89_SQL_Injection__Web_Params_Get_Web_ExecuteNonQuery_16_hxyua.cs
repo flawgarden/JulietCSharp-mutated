@@ -1,18 +1,3 @@
-//Original file region: 30, 71, null, null
-//Mutated file region: 48, 92, null, null
-//Semgrep original results: [89]
-//Snyk original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: [89]
-//Snyk analysis results: []
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_16.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/field/nested with name nested_field_simple_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

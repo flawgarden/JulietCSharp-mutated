@@ -1,0 +1,61 @@
+{
+    "original_file_metadata": {
+        "file_name": "src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_08.cs",
+        "CWEs": [
+            90
+        ],
+        "kind": "fail",
+        "region": {
+            "start_line": 43,
+            "end_line": 71,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "mutated_file_metadata": {
+        "used_templates": [
+            {
+                "template_file": "sensitivity/delegates/actionDelegates",
+                "template_name": "unary_action_call_negative"
+            }
+        ],
+        "used_extensions": [
+            " "
+        ],
+        "region": {
+            "start_line": 45,
+            "end_line": 76,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "tool_results": [
+        {
+            "tool_name": "CodeQL",
+            "original_found_CWEs": [
+                90
+            ],
+            "mutated_found_CWEs": [
+                90,
+                563
+            ]
+        },
+        {
+            "tool_name": "Snyk",
+            "original_found_CWEs": [
+                90
+            ],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "Semgrep",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "Insider",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        }
+    ]
+}

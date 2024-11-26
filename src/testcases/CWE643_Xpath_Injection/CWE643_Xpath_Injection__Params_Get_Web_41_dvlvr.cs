@@ -1,20 +1,3 @@
-//Original file region: 31, 75, null, null
-//Mutated file region: 50, 97, null, null
-//CodeQL original results: [643]
-//Snyk original results: [643]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [643, 563]
-//Snyk analysis results: []
-//Insider analysis results: [316]
-//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__Params_Get_Web_41.cs
-//Original file CWE's: [643]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/anonymousDelegates with name get_from_argless_delegate_neutral_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

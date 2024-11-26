@@ -1,18 +1,3 @@
-//Original file region: 38, 118, null, null
-//Mutated file region: 56, 139, null, null
-//Semgrep original results: [89]
-//CodeQL original results: [89]
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [459, 404, 460, 89]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_07.cs
-//Original file CWE's: [89]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/preprocessor with name MACRO_expr_positive 
-//Used extensions: 
-//Program:
 #define SOME_DEFINED
 using System;
 using System.Linq;

@@ -1,20 +1,3 @@
-//Original file region: 43, 77, null, null
-//Mutated file region: 62, 99, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [835, 563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__QueryString_Web_08.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Program:
-// Mutation info: Insert template from sensitivity/conditional/if with name if_operator_negative
-// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;

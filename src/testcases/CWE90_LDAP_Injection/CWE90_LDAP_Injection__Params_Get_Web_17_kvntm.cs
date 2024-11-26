@@ -1,20 +1,3 @@
-//Original file region: 29, 51, null, null
-//Mutated file region: 48, 80, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: []
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_17.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/delegates/multicastDelegates with name added_multicast_call_positive_1 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;

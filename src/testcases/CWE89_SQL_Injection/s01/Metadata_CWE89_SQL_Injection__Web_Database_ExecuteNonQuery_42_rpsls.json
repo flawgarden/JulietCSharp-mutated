@@ -1,0 +1,55 @@
+{
+    "original_file_metadata": {
+        "file_name": "src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_42.cs",
+        "CWEs": [
+            89
+        ],
+        "kind": "fail",
+        "region": {
+            "start_line": 30,
+            "end_line": 94,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "mutated_file_metadata": {
+        "used_templates": [
+            {
+                "template_file": "sensitivity/conditional/switch",
+                "template_name": "switch_operator_negative"
+            }
+        ],
+        "used_extensions": [
+            " "
+        ],
+        "region": {
+            "start_line": 32,
+            "end_line": 107,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "tool_results": [
+        {
+            "tool_name": "Semgrep",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": [
+                89
+            ]
+        },
+        {
+            "tool_name": "Snyk",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "Insider",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        }
+    ]
+}

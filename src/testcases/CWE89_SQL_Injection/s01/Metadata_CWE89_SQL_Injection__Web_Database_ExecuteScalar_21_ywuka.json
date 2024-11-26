@@ -1,0 +1,65 @@
+{
+    "original_file_metadata": {
+        "file_name": "src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs",
+        "CWEs": [
+            89
+        ],
+        "kind": "fail",
+        "region": {
+            "start_line": 33,
+            "end_line": 95,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "mutated_file_metadata": {
+        "used_templates": [
+            {
+                "template_file": "sensitivity/delegates/funcDelegates",
+                "template_name": "ternary_func_call_negative"
+            }
+        ],
+        "used_extensions": [
+            " ~[MACRO_DelegateVar@1003]~ -> delegate0912",
+            "~[MACRO_FuncTernary_Trd@1004]~ -> Func<~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~> ~[MACRO_DelegateVar@1001]~ = (~[TYPE@1]~ v1, ~[TYPE@1]~ v2, ~[TYPE@1]~ v3) => v3;",
+            "~[MACRO_DelegateVar@1001]~ -> delegate0912",
+            "~[MACRO_DelegateVar@1003]~ -> delegate0912",
+            "~[MACRO_FuncTernary_Trd@1004]~ -> Func<~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~, ~[TYPE@1]~> ~[MACRO_DelegateVar@1001]~ = (~[TYPE@1]~ v1, ~[TYPE@1]~ v2, ~[TYPE@1]~ v3) => v3;",
+            "~[MACRO_DelegateVar@1001]~ -> delegate0912"
+        ],
+        "region": {
+            "start_line": 35,
+            "end_line": 100,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "tool_results": [
+        {
+            "tool_name": "Semgrep",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": [
+                89
+            ]
+        },
+        {
+            "tool_name": "Snyk",
+            "original_found_CWEs": [
+                89
+            ],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "CodeQL",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        },
+        {
+            "tool_name": "Insider",
+            "original_found_CWEs": [],
+            "mutated_found_CWEs": []
+        }
+    ]
+}

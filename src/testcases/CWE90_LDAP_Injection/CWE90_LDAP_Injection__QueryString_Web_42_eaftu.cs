@@ -1,20 +1,3 @@
-//Original file region: 29, 60, null, null
-//Mutated file region: 54, 91, null, null
-//CodeQL original results: [90]
-//Snyk original results: [90]
-//Semgrep original results: []
-//Insider original results: []
-//-------------
-//Semgrep analysis results: []
-//CodeQL analysis results: [563]
-//Snyk analysis results: [90]
-//Insider analysis results: [787]
-//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__QueryString_Web_42.cs
-//Original file CWE's: [90]  
-//Original file kind: fail
-//Mutation info: Insert template from sensitivity/unsafe/pointers with name pointer_addition_positive 
-//Used extensions: 
-//Program:
 using System;
 using System.Linq;
 using System.Collections;
