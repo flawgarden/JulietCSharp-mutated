@@ -62,7 +62,7 @@ class MutatedCWE89_SQL_Injection__Web_ReadLine_ExecuteNonQuery_03224600 : Abstra
         if (5==5)
         {
             int? result = null;
-#if SOME_NOT_MACROD && !SOME_NOT_MACROD
+#if SOME_NOT_DEFINED && !SOME_NOT_DEFINED
 data = "";
 #endif
             try

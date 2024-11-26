@@ -67,7 +67,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01845465 : Abstra
         try
         {
 var tmp42 = data; 
-#if SOME_MACROD
+#if SOME_DEFINED
 data = "";
 #else
 data = tmp42;

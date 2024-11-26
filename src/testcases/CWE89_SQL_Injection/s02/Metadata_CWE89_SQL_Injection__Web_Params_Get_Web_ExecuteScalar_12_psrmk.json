@@ -16,7 +16,7 @@
         "used_templates": [
             {
                 "template_file": "sensitivity/preprocessor",
-                "template_name": "MACRO_simple_negative"
+                "template_name": "define_simple_negative"
             }
         ],
         "used_extensions": [

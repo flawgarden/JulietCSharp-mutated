@@ -76,7 +76,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11516991 : Abstra
         {
             int? result = null;
 var tmp42 = data; 
-#if SOME_MACROD
+#if SOME_DEFINED
 data = "";
 #else
 data = tmp42;

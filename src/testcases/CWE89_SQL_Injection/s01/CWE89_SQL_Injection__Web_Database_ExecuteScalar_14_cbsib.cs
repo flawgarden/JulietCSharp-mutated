@@ -55,7 +55,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_14223760 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-#if SOME_NOT_MACROD || !SOME_NOT_MACROD
+#if SOME_NOT_DEFINED || !SOME_NOT_DEFINED
 data = "";
 #endif
                                 data = dr.GetString(1);

@@ -53,7 +53,7 @@ class MutatedCWE89_SQL_Injection__Web_Params_Get_Web_ExecuteScalar_12990527 : Ab
                 using (SqlConnection dbConnection = IO.GetDBConnection())
                 {
                     dbConnection.Open();
-#if SOME_MACROD
+#if SOME_DEFINED
 data = "";
 #endif
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))

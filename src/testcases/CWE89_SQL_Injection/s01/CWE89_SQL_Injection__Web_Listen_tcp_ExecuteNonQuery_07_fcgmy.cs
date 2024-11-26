@@ -95,7 +95,7 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_07612090 : Abst
             int? result = null;
             try
             {
-#if SOME_NOT_MACROD && !SOME_NOT_MACROD
+#if SOME_NOT_DEFINED && !SOME_NOT_DEFINED
 data = "";
 #endif
                 using (SqlConnection dbConnection = IO.GetDBConnection())

@@ -75,7 +75,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_11695577 : Abstract
         if(IO.StaticReturnsTrue())
         {
 var tmp42 = data; 
-#if SOME_NOT_MACROD
+#if SOME_NOT_DEFINED
 data = "";
 #else
 data = tmp42;
