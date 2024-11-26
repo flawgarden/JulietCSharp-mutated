@@ -1,0 +1,15 @@
+[[runs]]
+roots = [""]
+
+[[runs.tools]]
+script = "CodeQL"
+config = "C#"
+
+[[runs.tools]]
+script = "Semgrep"
+config = "C#"
+
+[[runs.tools]]
+script = "Snyk"
+config = "C#"
+
