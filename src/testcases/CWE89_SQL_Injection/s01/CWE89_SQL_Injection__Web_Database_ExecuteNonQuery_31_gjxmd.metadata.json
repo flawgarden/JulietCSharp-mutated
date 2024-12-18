@@ -15,8 +15,8 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/aliases",
-                "template_name": "alias_positive"
+                "template_file": "sensitivity/import/import",
+                "template_name": "import_string_module_alias_positive"
             }
         ],
         "used_extensions": [],

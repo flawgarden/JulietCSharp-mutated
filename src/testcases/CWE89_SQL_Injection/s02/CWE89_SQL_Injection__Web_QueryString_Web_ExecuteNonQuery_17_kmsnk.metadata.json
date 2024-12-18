@@ -15,8 +15,8 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/string_templates",
-                "template_name": "string_escaping_templates_negative"
+                "template_file": "sensitivity/string_interpolation",
+                "template_name": "string_interpolation_escaping_negative"
             }
         ],
         "used_extensions": [],

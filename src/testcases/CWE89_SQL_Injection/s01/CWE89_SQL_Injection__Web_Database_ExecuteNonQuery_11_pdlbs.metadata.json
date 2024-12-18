@@ -15,7 +15,7 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/partial",
+                "template_file": "sensitivity/cSharpAbstractions/partial",
                 "template_name": "partial_field_access_negative"
             }
         ],
