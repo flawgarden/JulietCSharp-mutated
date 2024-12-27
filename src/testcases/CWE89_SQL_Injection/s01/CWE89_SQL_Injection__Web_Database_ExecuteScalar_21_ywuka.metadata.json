@@ -28,8 +28,8 @@
             "~[MACRO_DelegateVar@1001]~ -> delegate0912"
         ],
         "region": {
-            "start_line": 35,
-            "end_line": 100,
+            "start_line": 37,
+            "end_line": 102,
             "start_column": null,
             "end_column": null
         },

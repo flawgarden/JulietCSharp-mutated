@@ -26,8 +26,8 @@
             "~[MACRO_CreateSubscriberNegative@1001]~ -> new EventSubscriberRewriter(~[CONST_string@1001]~)"
         ],
         "region": {
-            "start_line": 33,
-            "end_line": 91,
+            "start_line": 35,
+            "end_line": 93,
             "start_column": null,
             "end_column": null
         },

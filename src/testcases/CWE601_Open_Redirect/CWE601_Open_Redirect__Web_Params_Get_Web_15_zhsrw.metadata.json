@@ -24,8 +24,8 @@
             "~[EXPR_string@1001]~ -> ~[EXPR_string@1001]~.Replace(~[EXPR_string@1002]~, ~[EXPR_string@1003]~)"
         ],
         "region": {
-            "start_line": 30,
-            "end_line": 80,
+            "start_line": 32,
+            "end_line": 82,
             "start_column": null,
             "end_column": null
         },

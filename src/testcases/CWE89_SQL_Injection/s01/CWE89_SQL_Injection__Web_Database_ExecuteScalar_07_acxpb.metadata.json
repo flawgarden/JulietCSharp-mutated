@@ -23,8 +23,8 @@
             " ~[EXPR_string@1001]~ -> ~[EXPR_string@1001]~.Trim()"
         ],
         "region": {
-            "start_line": 49,
-            "end_line": 115,
+            "start_line": 40,
+            "end_line": 117,
             "start_column": null,
             "end_column": null
         },

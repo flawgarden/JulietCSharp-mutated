@@ -30,8 +30,8 @@
             "~[MACRO_AnonTypeVarName@1002]~ -> anon42342"
         ],
         "region": {
-            "start_line": 35,
-            "end_line": 100,
+            "start_line": 37,
+            "end_line": 102,
             "start_column": null,
             "end_column": null
         },

@@ -23,8 +23,8 @@
             " ~[EXPR_string@1001]~ -> String.Intern(~[EXPR_string@1001]~)"
         ],
         "region": {
-            "start_line": 32,
-            "end_line": 72,
+            "start_line": 34,
+            "end_line": 74,
             "start_column": null,
             "end_column": null
         },

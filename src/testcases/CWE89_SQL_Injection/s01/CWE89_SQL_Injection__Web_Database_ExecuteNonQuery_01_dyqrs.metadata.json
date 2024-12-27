@@ -24,8 +24,8 @@
             "~[MACRO_FuncType@1001]~ -> RefargFunctions.Func"
         ],
         "region": {
-            "start_line": 33,
-            "end_line": 94,
+            "start_line": 35,
+            "end_line": 96,
             "start_column": null,
             "end_column": null
         },
