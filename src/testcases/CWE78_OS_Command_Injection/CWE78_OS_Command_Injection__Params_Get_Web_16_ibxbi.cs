@@ -30,7 +30,7 @@ using System.Web;
 namespace testcases.CWE78_OS_Command_Injection
 {
 
-class MutatedCWE78_OS_Command_Injection__Params_Get_Web_29587729 : AbstractTestCaseWeb
+class MutatedCWE78_OS_Command_Injection__Params_Get_Web_21587729 : AbstractTestCaseWeb
 {
 #if (!OMITBAD)
     /* uses badsource and badsink */
