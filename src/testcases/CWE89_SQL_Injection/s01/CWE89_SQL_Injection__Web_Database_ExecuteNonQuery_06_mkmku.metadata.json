@@ -28,7 +28,7 @@
             "start_column": null,
             "end_column": null
         },
-        "kind": "TODOneutral"
+        "kind": "fail"
     },
     "tool_results": [
         {
