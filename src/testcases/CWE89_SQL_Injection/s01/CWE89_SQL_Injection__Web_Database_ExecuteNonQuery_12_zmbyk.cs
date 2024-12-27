@@ -1,3 +1,20 @@
+//Original file region: 30, 132, null, null
+//Mutated file region: 49, 156, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_12.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/array with name array_concat_array_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -61,11 +78,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_12798542 : Abstra
                 }
                 catch (SqlException exceptSql)
                 {
-
-var array139418 = new[]{ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy", data };
-string[] array139418_2 = [ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy" ];
-string[] yarra3141 = [.. array139418, .. array139418_2 ];
-data = yarra3141[3];
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }
@@ -86,6 +98,11 @@ data = yarra3141[3];
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+
+                        var array139418 = new[]{ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy", data };
+                        string[] array139418_2 = [ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy" ];
+                        string[] yarra3141 = [.. array139418, .. array139418_2 ];
+                        data = yarra3141[3];
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

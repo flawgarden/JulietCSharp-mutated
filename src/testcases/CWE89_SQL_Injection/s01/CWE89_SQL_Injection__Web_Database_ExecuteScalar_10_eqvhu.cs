@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 49, 121, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_10.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/if with name if_operator_with_var_in_condition_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -45,13 +62,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_10627442 : Abstract
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-bool conditionMet = false;
-if (true) {
-    conditionMet = true;
-}
-if (!conditionMet && true) {
-    data = "";
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -62,6 +72,13 @@ if (!conditionMet && true) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                bool conditionMet = false;
+                                if (true) {
+                                    conditionMet = true;
+                                }
+                                if (!conditionMet && true) {
+                                    data = "";
+                                }
                             }
                         }
                     }

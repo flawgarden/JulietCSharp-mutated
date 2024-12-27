@@ -1,3 +1,20 @@
+//Original file region: 36, 106, null, null
+//Mutated file region: 56, 130, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_05.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/pattern-matching/matching with name if_int_list_type_pattern_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -76,10 +93,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_05167524 : Abstra
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-object tmp42 = new List<int> {1, 2, 3, 4, 5};
-if (tmp42 is ICollection<int>) {
-    data = "";
-}
+
             data = null;
         }
         if (privateTrue)
@@ -93,6 +107,10 @@ if (tmp42 is ICollection<int>) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        object tmp42 = new List<int> {1, 2, 3, 4, 5};
+if (tmp42 is ICollection<int>) {
+    data = "";
+}
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

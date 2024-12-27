@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 50, 120, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_03.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/regex with name regex_anchor_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -82,6 +99,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03309644 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var regex42 = @"42\z";
+                        var str42 = "10042";
+                        if (Regex.IsMatch(str42, regex42)) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -93,11 +115,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03309644 : Abstract
             }
             catch (SqlException exceptSql)
             {
-var regex42 = @"42\z";
-var str42 = "10042";
-if (Regex.IsMatch(str42, regex42)) {
-    data = "";
-}
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

@@ -1,3 +1,20 @@
+//Original file region: 30, 96, null, null
+//Mutated file region: 49, 122, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/queue with name queue_is_empty_1_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -40,13 +57,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16591023 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-var queue42 = new Queue<string>();
-queue42.Enqueue(data);
-var value42 = queue42.Dequeue();
-if (queue42.Count == 0) {
-    value42 = "kBAjFt";
-}
-data = value42;
+
                 try
                 {
                     /* setup the connection */
@@ -62,6 +73,13 @@ data = value42;
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var queue42 = new Queue<string>();
+queue42.Enqueue(data);
+var value42 = queue42.Dequeue();
+if (queue42.Count == 0) {
+    value42 = "kBAjFt";
+}
+data = value42;
                             }
                         }
                     }

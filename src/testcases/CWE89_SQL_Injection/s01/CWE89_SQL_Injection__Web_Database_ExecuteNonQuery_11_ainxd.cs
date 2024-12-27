@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 50, 125, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/map with name map_remove_1_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -48,11 +65,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11855626 : Abstra
                     {
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
-var map42 = new Dictionary<string, string>();
-map42[data] = "const string";
-if (map42.Remove(data, out var value)) {
-    data = value;
-}
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
@@ -61,6 +73,11 @@ if (map42.Remove(data, out var value)) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var map42 = new Dictionary<string, string>();
+                                map42[data] = "const string";
+                                if (map42.Remove(data, out var value)) {
+                                    data = value;
+                                }
                             }
                         }
                     }

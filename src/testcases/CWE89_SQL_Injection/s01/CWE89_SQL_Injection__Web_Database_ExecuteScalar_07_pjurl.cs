@@ -1,3 +1,18 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 63, 129, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_07.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/pm with name pattern_matching_simple_2_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -66,7 +81,6 @@ public string simplePatternMatchingString1(object obj) {
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
-data = simplePatternMatchingString1(privateFive);
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
@@ -98,6 +112,7 @@ data = simplePatternMatchingString1(privateFive);
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        data = simplePatternMatchingString1(privateFive);
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)

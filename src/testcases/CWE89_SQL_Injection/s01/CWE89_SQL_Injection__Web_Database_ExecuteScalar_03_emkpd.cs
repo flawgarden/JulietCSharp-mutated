@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 50, 121, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_03.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/set with name set_size_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -46,12 +63,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03957622 : Abstract
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-ISet<string> set42 = new HashSet<string>();
-set42.Add("awesome string");
-set42.Add(data);
-if (set42.Count == 2) {
-    data = "42";
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -62,6 +73,12 @@ if (set42.Count == 2) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                ISet<string> set42 = new HashSet<string>();
+set42.Add("awesome string");
+set42.Add(data);
+if (set42.Count == 2) {
+    data = "42";
+}
                             }
                         }
                     }

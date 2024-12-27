@@ -1,3 +1,20 @@
+//Original file region: 34, 94, null, null
+//Mutated file region: 55, 125, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/dynamic with name dynamic_binding_exception_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -84,7 +101,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45168154 : Abstract
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-
+                            data = dr.GetString(1);
 try
 {
     dynamic dynamic9871 = new ArrayHolder(dataBad);
@@ -94,7 +111,7 @@ catch (RuntimeBinderException _)
 {
     dataBad = "JG2uE";
 }
-                            data = dr.GetString(1);
+
                         }
                     }
                 }

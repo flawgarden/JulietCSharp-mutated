@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 49, 124, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/queue with name simple_peek_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -82,12 +99,12 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14147226 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
-                        badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
-var queue42 = new Queue<string>();
+                        var queue42 = new Queue<string>();
 queue42.Enqueue(data);
 queue42.Dequeue();
 queue42.TryPeek(out var result42);
 data = result42;
+                        badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {

@@ -1,3 +1,20 @@
+//Original file region: 33, 95, null, null
+//Mutated file region: 53, 119, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/field/constructors with name class_with_array_initialization_negative
+// Used extensions: ~[MACRO_Empty_string_Array@1001]~ -> {"", "", "", ""} | ~[MACRO_Empty_string_Array@1001]~ -> {"", "", "", ""}
 using System;
 using System.Linq;
 using System.Collections;
@@ -63,10 +80,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_21856117 : Abstract
             }
             catch (SqlException exceptSql)
             {
-string[] tmpArrayUnique42 = {"", "", "", ""};
-tmpArrayUnique42[0] = data;
-ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
-data = ah.values[1];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }
@@ -85,6 +98,10 @@ data = ah.values[1];
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        string[] tmpArrayUnique42 = {"", "", "", ""};
+                        tmpArrayUnique42[0] = data;
+                        ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
+                        data = ah.values[1];
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();

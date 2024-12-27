@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 51, 126, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_02.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/dynamic with name dynamic_cast_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -57,6 +74,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_02118242 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                dynamic dynamic9871 = data;
+                                if (dynamic9871 is string)
+                                {
+                                    data = "e0D1M2qfNJUlhqn2tBQDsgsPCoV8I93StaWwlqka";
+                                }
+                                else
+                                {
+                                    data = dynamic9871;
+                                }
                             }
                         }
                     }
@@ -72,15 +98,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_02118242 : Abstract
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
 
-dynamic dynamic9871 = data;
-if (dynamic9871 is string)
-{
-    data = "e0D1M2qfNJUlhqn2tBQDsgsPCoV8I93StaWwlqka";
-}
-else
-{
-    data = dynamic9871;
-}
             data = null;
         }
         if (true)

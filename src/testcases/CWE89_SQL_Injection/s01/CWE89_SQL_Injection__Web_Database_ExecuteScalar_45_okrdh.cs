@@ -1,3 +1,20 @@
+//Original file region: 34, 94, null, null
+//Mutated file region: 53, 116, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/array with name array_index_from_end_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -83,15 +100,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45692349 : Abstract
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            var array139418 = new[]{ "EKQdoGidmXZakFIn7rAzJUXc3YOyXzg710Gf0STbRWgxAmE2z9xLtvytxxjP2tFx0cjt8nxoXihxyjbRTV9XBVNGBXsCtEjhQ", "iCV3MMJxKNB4NVS5guswfOdrl4u5T99gGn3O8cwL2hC2AceraICxi6bUjnSRcNeLOeykcD6E7g37LkrIaCeK7M8JLioVJfs", data };
+                            data = array139418[^2];
                         }
                     }
                 }
             }
             catch (SqlException exceptSql)
             {
-
-var array139418 = new[]{ "EKQdoGidmXZakFIn7rAzJUXc3YOyXzg710Gf0STbRWgxAmE2z9xLtvytxxjP2tFx0cjt8nxoXihxyjbRTV9XBVNGBXsCtEjhQ", "iCV3MMJxKNB4NVS5guswfOdrl4u5T99gGn3O8cwL2hC2AceraICxi6bUjnSRcNeLOeykcD6E7g37LkrIaCeK7M8JLioVJfs", dataBad };
-dataBad = array139418[^2];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

@@ -1,3 +1,20 @@
+//Original file region: 34, 94, null, null
+//Mutated file region: 53, 117, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/list with name list_add_get_at_zero_index_empty_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -83,16 +100,16 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45265238 : Abstract
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            var list42 = new List<string>();
+                            list42.Add(dataBad);
+                            list42.Insert(0, "");
+                            dataBad = list42[0];
                         }
                     }
                 }
             }
             catch (SqlException exceptSql)
             {
-var list42 = new List<string>();
-list42.Add(dataBad);
-list42.Insert(0, "");
-dataBad = list42[0];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

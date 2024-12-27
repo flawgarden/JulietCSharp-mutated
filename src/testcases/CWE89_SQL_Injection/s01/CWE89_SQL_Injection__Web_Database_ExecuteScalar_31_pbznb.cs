@@ -1,3 +1,20 @@
+//Original file region: 30, 90, null, null
+//Mutated file region: 64, 126, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_31.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/generics/constrainedMethods with name interface_constrained_generic_method_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -91,9 +108,9 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+data = InterfaceConstrainedMethod<ImplBinaryOpInterfaceClass1>("zsKDenDPy963MZNMV5RtmYEguJQNWnCLji9M2IVE97Ill0cR9NK2tEAbonTUW03K7u", data);
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
 
-data = InterfaceConstrainedMethod<ImplBinaryOpInterfaceClass1>("zsKDenDPy963MZNMV5RtmYEguJQNWnCLji9M2IVE97Ill0cR9NK2tEAbonTUW03K7u", data);
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {

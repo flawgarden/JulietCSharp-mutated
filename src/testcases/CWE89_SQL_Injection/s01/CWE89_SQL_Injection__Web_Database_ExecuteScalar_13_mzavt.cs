@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 50, 121, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_13.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/map with name map_clear_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -56,18 +73,18 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_13862053 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var map42 = new Dictionary<string, string>();
+map42[data] = data;
+map42.Clear();
+var value = "";
+map42.TryGetValue(data, out value);
+data = value;
                             }
                         }
                     }
                 }
                 catch (SqlException exceptSql)
                 {
-var map42 = new Dictionary<string, string>();
-map42[data] = data;
-map42.Clear();
-var value = "";
-map42.TryGetValue(data, out value);
-data = value;
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

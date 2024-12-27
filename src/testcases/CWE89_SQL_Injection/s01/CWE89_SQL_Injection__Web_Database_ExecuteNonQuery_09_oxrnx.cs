@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 50, 122, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/field/constructors with name class_with_nested_string_initialization_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -51,13 +68,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09941984 : Abstra
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
-NestedStringHolder nsh = new NestedStringHolder();
-data = nsh.getValue();
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                NestedStringHolder nsh = new NestedStringHolder();
+data = nsh.getValue();
                             }
                         }
                     }

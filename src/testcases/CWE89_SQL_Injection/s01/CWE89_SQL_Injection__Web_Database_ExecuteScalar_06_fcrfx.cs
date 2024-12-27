@@ -1,3 +1,20 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 55, 125, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/regex with name regex_alternation_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -86,13 +103,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06753160 : Abstract
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        var regex42 = @"(a|b)";
+                        var str42 = "b";
+                        if (Regex.IsMatch(str42, regex42)) {
+                            data = "";
+                        }
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
-var regex42 = @"(a|b)";
-var str42 = "b";
-if (Regex.IsMatch(str42, regex42)) {
-    data = "";
-}
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {

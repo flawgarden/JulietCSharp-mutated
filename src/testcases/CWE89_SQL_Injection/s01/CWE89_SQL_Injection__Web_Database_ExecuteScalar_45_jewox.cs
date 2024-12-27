@@ -1,3 +1,18 @@
+//Original file region: 34, 94, null, null
+//Mutated file region: 51, 133, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/recursion with name recursion_mutual_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -100,11 +115,11 @@ public string paramOrEmpty(int value, string param) {
                     {
                         command.CommandText = "select name from users where id=0";
                         command.Prepare();
-dataBad = paramOrEmptyMutual2(dataBad.Length, dataBad);
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            data = paramOrEmptyMutual2(data.Length, data);
                         }
                     }
                 }

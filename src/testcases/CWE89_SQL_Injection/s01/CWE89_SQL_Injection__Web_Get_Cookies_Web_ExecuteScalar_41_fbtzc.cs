@@ -1,3 +1,20 @@
+//Original file region: 30, 71, null, null
+//Mutated file region: 55, 102, null, null
+//Semgrep original results: [89]
+//CodeQL original results: [89]
+//Snyk original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: [89]
+//Insider analysis results: [787]
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_41.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/unsafe/pointers with name pointer_addition_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -48,7 +65,7 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
 string[] arr524 = { data, data, data };
 fixed (string* ptr524 = arr524)
 {
-    data = *(ptr524 + 2);
+    data = *(ptr524 + 0);
 }
                 dbConnection.Open();
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))

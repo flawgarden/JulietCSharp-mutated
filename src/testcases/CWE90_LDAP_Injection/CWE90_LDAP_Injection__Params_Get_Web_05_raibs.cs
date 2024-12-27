@@ -1,3 +1,20 @@
+//Original file region: 36, 64, null, null
+//Mutated file region: 56, 96, null, null
+//CodeQL original results: [90]
+//Snyk original results: [90]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: [90, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_05.cs
+//Original file CWE's: [90]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/varargs/varargs with name varargs_combine_strings_negative
+// Used extensions: ~[EXPR_string@1001]~ -> String.Concat(~[EXPR_string@1001]~, ~[EXPR_string@1002]~) | ~[EXPR_string@1002]~ -> String.Concat(~[EXPR_string@1001]~, ~[EXPR_string@1002]~)
 using System;
 using System.Linq;
 using System.Collections;
@@ -58,6 +75,7 @@ public string getFirstString(params string[] lines) {
         {
             /* POTENTIAL FLAW: Read data from a querystring using Params.Get */
             data = req.Params.Get("name");
+data = combineStrings(String.Concat("ueLVgNF0j1a68L5qjQGrK3sXxmQQisyaO4UXRm3ZpjpLmh6", String.Concat("GGP0", "36yR0D9rD1iZ6XrCkNhuQqWjQZXUIoelcEAc0SzHnz3CI3WEYEonODRNkOA")), data);
         }
         else
         {
@@ -68,7 +86,6 @@ public string getFirstString(params string[] lines) {
         using (DirectoryEntry de = new DirectoryEntry())
         {
             /* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
-data = combineStrings(String.Concat("ueLVgNF0j1a68L5qjQGrK3sXxmQQisyaO4UXRm3ZpjpLmh6", String.Concat("GGP0", "36yR0D9rD1iZ6XrCkNhuQqWjQZXUIoelcEAc0SzHnz3CI3WEYEonODRNkOA")), data);
             using (DirectorySearcher search = new DirectorySearcher(de))
             {
                 search.Filter = "(&(objectClass=user)(employeename=" + data + "))";

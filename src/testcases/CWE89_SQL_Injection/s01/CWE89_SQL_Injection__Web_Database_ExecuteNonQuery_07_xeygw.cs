@@ -1,3 +1,20 @@
+//Original file region: 35, 105, null, null
+//Mutated file region: 54, 133, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/delegates/multicastDelegates with name subtracted_multicast_call_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -51,14 +68,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07975582 : Abstra
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
 
-var outer1094 = "";
-Action<string> action194392_pos = (string s) => outer1094 += s;
-Action<string> action194392_neg = (string s) => outer1094 += " ";
-Action<string> action194392 = action194392_pos + action194392_neg;
-
-action194392 -= action194392_pos;
-action194392(data);
-data = outer1094;
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -69,6 +78,14 @@ data = outer1094;
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var outer1094 = "";
+Action<string> action194392_pos = (string s) => outer1094 += s;
+Action<string> action194392_neg = (string s) => outer1094 += " ";
+Action<string> action194392 = action194392_pos + action194392_neg;
+
+action194392 -= action194392_pos;
+action194392(data);
+data = outer1094;
                             }
                         }
                     }

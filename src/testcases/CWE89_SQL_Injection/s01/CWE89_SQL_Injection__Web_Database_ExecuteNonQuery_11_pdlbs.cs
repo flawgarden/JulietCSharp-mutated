@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 50, 123, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/abstraction/partial with name partial_field_access_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -56,6 +73,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11328412 : Abstra
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var partial4321 = new PartialClass("qdvPHKG3gWGpmAW7WGQ2IBWMNGwEk7loixPNSXXMFaGgLO2eO", "Eq2SpHjBBYCTjvbHzuJo9sDxs4zB8NS0lTg8qekGtVWyDHgvtHDtFToVnFkuRiDxGLr");
+data = partial4321.StrTwo;
                             }
                         }
                     }
@@ -71,8 +90,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11328412 : Abstra
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
 
-var partial4321 = new PartialClass("qdvPHKG3gWGpmAW7WGQ2IBWMNGwEk7loixPNSXXMFaGgLO2eO", "Eq2SpHjBBYCTjvbHzuJo9sDxs4zB8NS0lTg8qekGtVWyDHgvtHDtFToVnFkuRiDxGLr");
-data = partial4321.StrTwo;
             data = null;
         }
         if(IO.StaticReturnsTrue())

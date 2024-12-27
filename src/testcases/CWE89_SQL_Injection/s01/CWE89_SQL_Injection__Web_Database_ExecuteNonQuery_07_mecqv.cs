@@ -1,3 +1,20 @@
+//Original file region: 35, 105, null, null
+//Mutated file region: 54, 132, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/delegates/multicastDelegates with name multicast_call_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -87,18 +104,18 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07314765 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var outer1094 = "";
+                        Action<string> action194392_pos = (string s) => outer1094 += s;
+                        Action<string> action194392_neg = (string s) => outer1094 += " ";
+                        Action<string> action194392 = action194392_pos + action194392_neg;
+
+                        action194392("F0Eh3sQKXxTZqnyXSej7qXiO8kHKuGhfJcZXen8Gd5LK4");
+                        data = outer1094;
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {
 
-var outer1094 = "";
-Action<string> action194392_pos = (string s) => outer1094 += s;
-Action<string> action194392_neg = (string s) => outer1094 += " ";
-Action<string> action194392 = action194392_pos + action194392_neg;
-
-action194392("F0Eh3sQKXxTZqnyXSej7qXiO8kHKuGhfJcZXen8Gd5LK4");
-data = outer1094;
                             IO.WriteLine("Name, " + data +", updated successfully");
                         }
                         else

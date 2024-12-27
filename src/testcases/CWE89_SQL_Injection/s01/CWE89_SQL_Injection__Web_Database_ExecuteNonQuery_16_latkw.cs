@@ -1,3 +1,20 @@
+//Original file region: 30, 96, null, null
+//Mutated file region: 50, 121, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/pattern-matching/matching with name switch_int_list_type_pattern_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -78,6 +95,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16787960 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        object tmp42 = new List<int> {1, 2, 3, 4, 5};
+data = tmp42 switch {
+    List<int> => "",
+    _ => data
+};
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -86,11 +108,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16787960 : Abstra
                         }
                         else
                         {
-object tmp42 = new List<int> {1, 2, 3, 4, 5};
-data = tmp42 switch {
-    List<int> => "",
-    _ => data
-};
+
                             IO.WriteLine("Unable to update records for user: " + data);
                         }
                     }

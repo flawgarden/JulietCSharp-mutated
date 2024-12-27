@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 50, 118, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_14.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/preprocessor with name MACRO_expr_negative 
+//Used extensions: 
+//Program:
 #define SOME_DEFINED
 using System;
 using System.Linq;
@@ -55,10 +72,10 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_14223760 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-#if SOME_NOT_DEFINED || !SOME_NOT_DEFINED
-data = "";
-#endif
                                 data = dr.GetString(1);
+                                #if SOME_NOT_MACROD || !SOME_NOT_MACROD
+                                data = "";
+                                #endif
                             }
                         }
                     }

@@ -1,3 +1,20 @@
+//Original file region: 33, 115, null, null
+//Mutated file region: 54, 139, null, null
+//Semgrep original results: [89]
+//CodeQL original results: [89]
+//Snyk original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [459, 404, 460, 835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/generics/constrainedClasses with name inheritance_constrained_generic_class_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -58,6 +75,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15176804 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+                            var constrained09143 = new InheritanceConstrainedClass<DerivedBinaryOpClass1, BaseBinaryOpClass>(new DerivedBinaryOpClass1());
+data = constrained09143.ChooseNone(data, "DrqjjCbIP9mZzqoWeznT1tG2yevv");
                         }
                     }
                 }
@@ -68,8 +87,6 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15176804 : Abstra
                 finally
                 {
 
-var constrained09143 = new InheritanceConstrainedClass<DerivedBinaryOpClass1, BaseBinaryOpClass>(new DerivedBinaryOpClass1());
-data = constrained09143.ChooseNone(data, "DrqjjCbIP9mZzqoWeznT1tG2yevv");
                     if (listener != null)
                     {
                         try

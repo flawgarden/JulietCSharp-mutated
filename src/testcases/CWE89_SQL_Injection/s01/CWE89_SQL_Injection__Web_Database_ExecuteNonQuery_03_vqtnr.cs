@@ -1,3 +1,18 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 49, 128, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/concurrency/concurrency with name thread_set_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -51,21 +66,21 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03925383 : Abstra
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
-Wrapper<string> w = new Wrapper<string>(data);
-var task = new SettingTask(w, "");
-Thread thread = new(task.run);
-thread.Start();
-try {
-  thread.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                             command.CommandText = "select name from users where id=0";
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                Wrapper<string> w = new Wrapper<string>(data);
+                                var task = new SettingTask(w, "");
+                                Thread thread = new(task.run);
+                                thread.Start();
+                                try {
+                                thread.Join();
+                                } catch (ThreadInterruptedException e) {
+                                }
+                                data = w.i;
                             }
                         }
                     }

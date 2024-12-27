@@ -1,3 +1,20 @@
+//Original file region: 30, 93, null, null
+//Mutated file region: 50, 129, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/generics/constrainedMethods with name inheritance_constrained_generic_method_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -98,6 +115,7 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+data = InheritanceConstrainedMethod<DerivedBinaryOpClass1, BaseBinaryOpClass>("1b", data);
                         }
                     }
                 }
@@ -105,8 +123,6 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
             catch (SqlException exceptSql)
             {
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
-
-data = InheritanceConstrainedMethod<DerivedBinaryOpClass1, BaseBinaryOpClass>("1b", data);
             }
         }
         BadSink(data , req, resp );

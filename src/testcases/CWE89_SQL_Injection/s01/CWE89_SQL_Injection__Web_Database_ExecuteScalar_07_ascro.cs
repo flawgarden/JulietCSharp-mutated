@@ -1,3 +1,20 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 55, 126, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [395, 476, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_07.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/exceptions/causeThrows with name null_pointer_exception_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -87,14 +104,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_07844527 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        try {
+                            string s42 = null;
+                            var i42 = s42.Length;
+                        } catch (NullReferenceException e) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
-try {
-    string s42 = null;
-    var i42 = s42.Length;
-} catch (NullReferenceException e) {
-    data = "";
-}
                         if (firstCol != null)
                         {
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */

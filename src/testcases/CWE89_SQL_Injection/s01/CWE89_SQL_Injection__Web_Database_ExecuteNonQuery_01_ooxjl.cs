@@ -1,3 +1,20 @@
+//Original file region: 30, 88, null, null
+//Mutated file region: 50, 116, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/linq with name linq_simple_orderby_thenby_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -42,14 +59,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01643560 : Abstra
             try
             {
                 /* setup the connection */
-ICollection<string> collection42 = new List<string>();
-collection42.Add("a");
-collection42.Add("a" + data);
-var query42 =
-    from item42 in collection42
-    orderby item42[0], item42.Length
-    select item42;
-data = query42.First();
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
                     connection.Open();
@@ -80,6 +89,14 @@ data = query42.First();
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                    ICollection<string> collection42 = new List<string>();
+                    collection42.Add("a");
+                    collection42.Add("a" + data);
+                    var query42 =
+                        from item42 in collection42
+                        orderby item42[0], item42.Length
+                        select item42;
+                    data = query42.First();
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();
                     if (result != null)

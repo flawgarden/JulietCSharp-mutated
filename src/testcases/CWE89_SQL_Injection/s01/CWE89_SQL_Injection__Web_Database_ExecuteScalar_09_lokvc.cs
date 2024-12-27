@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 49, 129, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_09.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/exceptions/filters with name exception_filter_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -54,7 +71,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_09133742 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-var tmp42 = data;
+                                data = dr.GetString(1);
+                                var tmp42 = data;
 int[] tmpArray42 = [0, 1, 2, 3, 4];
 var index = -1;
 try
@@ -69,7 +87,6 @@ catch (IndexOutOfRangeException e)
 {
     data = tmp42;
 }
-                                data = dr.GetString(1);
                             }
                         }
                     }

@@ -1,3 +1,18 @@
+//Original file region: 30, 90, null, null
+//Mutated file region: 48, 112, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_31.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/field/constructors with name class_with_array_initialization_negative
+// Used extensions: ~[MACRO_Empty_string_Array@1001]~ -> {"", "", "", ""} | ~[MACRO_Empty_string_Array@1001]~ -> {"", "", "", ""}
 using System;
 using System.Linq;
 using System.Collections;
@@ -76,15 +91,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_31648322 : Abstract
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        string[] tmpArrayUnique42 = {"", "", "", ""};
+                        tmpArrayUnique42[0] = data;
+                        ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
+                        data = ah.values[1];
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {
-string[] tmpArrayUnique42 = {"", "", "", ""};
-tmpArrayUnique42[0] = data;
-ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
-data = ah.values[1];
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */
                         }
                     }

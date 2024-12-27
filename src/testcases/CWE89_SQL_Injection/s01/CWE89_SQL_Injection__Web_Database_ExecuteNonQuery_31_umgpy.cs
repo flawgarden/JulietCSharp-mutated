@@ -1,3 +1,20 @@
+//Original file region: 30, 95, null, null
+//Mutated file region: 50, 119, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_31.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/pattern-matching/matching with name if_point_pattern_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -78,14 +95,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_31626338 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var tmp42 = new Point(42, -42);
+                        if (tmp42 is (42, -42)) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {
-var tmp42 = new Point(42, -42);
-if (tmp42 is (42, -42)) {
-    data = "";
-}
                             IO.WriteLine("Name, " + data +", updated successfully");
                         }
                         else

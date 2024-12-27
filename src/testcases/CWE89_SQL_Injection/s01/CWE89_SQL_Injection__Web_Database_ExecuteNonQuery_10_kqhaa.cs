@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 49, 122, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/list with name list_to_array_and_get_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -51,13 +68,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10458198 : Abstra
                         {
                             command.CommandText = "select name from users where id=0";
                             command.Prepare();
-var list42 = new List<string>();
-list42.Add("RTsZO4qdi");
-data =list42.ToArray()[0];
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var list42 = new List<string>();
+list42.Add("RTsZO4qdi");
+data =list42.ToArray()[0];
                             }
                         }
                     }

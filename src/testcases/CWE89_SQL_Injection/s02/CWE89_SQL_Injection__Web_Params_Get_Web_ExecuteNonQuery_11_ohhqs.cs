@@ -1,3 +1,20 @@
+//Original file region: 30, 75, null, null
+//Mutated file region: 49, 97, null, null
+//Semgrep original results: [89]
+//CodeQL original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: [89]
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s02/CWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_11.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/while with name while_operator_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -38,10 +55,11 @@ class MutatedCWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_11835481 : 
         if (IO.StaticReturnsTrue())
         {
             /* POTENTIAL FLAW: Read data from a querystring using Params.Get */
-while (true) {
-    data = "";
-}
             data = req.Params.Get("name");
+            while (true) {
+                data = "";
+                break;
+            }
         }
         else
         {

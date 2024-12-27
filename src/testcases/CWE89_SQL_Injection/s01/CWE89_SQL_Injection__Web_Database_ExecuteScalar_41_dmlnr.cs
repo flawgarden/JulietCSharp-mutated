@@ -1,3 +1,20 @@
+//Original file region: 30, 88, null, null
+//Mutated file region: 51, 118, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [390, 391, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_41.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/concurrency/concurrency with name thread_set_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -80,21 +97,21 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_41477594 : Abstract
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            Wrapper<string> w = new Wrapper<string>(data);
+                            var task = new SettingTask(w, "");
+                            Thread thread = new(task.run);
+                            thread.Start();
+                            try {
+                            thread.Join();
+                            } catch (ThreadInterruptedException e) {
+                            }
+                            data = w.i;
                         }
                     }
                 }
             }
             catch (SqlException exceptSql)
             {
-Wrapper<string> w = new Wrapper<string>(data);
-var task = new SettingTask(w, "");
-Thread thread = new(task.run);
-thread.Start();
-try {
-  thread.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

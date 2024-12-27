@@ -1,3 +1,20 @@
+//Original file region: 30, 62, null, null
+//Mutated file region: 55, 93, null, null
+//CodeQL original results: [78]
+//Snyk original results: [78]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: []
+//Snyk analysis results: [78]
+//Insider analysis results: [787]
+//Original file name: src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__QueryString_Web_41.cs
+//Original file CWE's: [78]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/unsafe/pointers with name pointer_addition_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -55,7 +72,7 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
 string[] arr524 = { "3CfXT42", data, data };
 fixed (string* ptr524 = arr524)
 {
-    data = *(ptr524 + 2);
+    data = *(ptr524 + 0);
 }
         /* POTENTIAL FLAW: command injection */
         Process process = Process.Start(osCommand + data);

@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 50, 128, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/exceptions/tryCatchFinally with name try_cath_finally_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -70,14 +87,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03134390 : Abstra
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-string tmpUnique42 = data;
-try {
-  throw new Exception1(data);
-} catch (Exception1 e) {
-    data = tmpUnique42;
-} finally {
-    data = "";
-}
             data = null;
         }
         if (5==5)
@@ -91,6 +100,14 @@ try {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        string tmpUnique42 = data;
+                        try {
+                        throw new Exception1(data);
+                        } catch (Exception1 e) {
+                            data = tmpUnique42;
+                        } finally {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

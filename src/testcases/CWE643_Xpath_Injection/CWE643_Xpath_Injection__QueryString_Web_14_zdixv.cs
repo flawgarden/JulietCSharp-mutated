@@ -1,3 +1,20 @@
+//Original file region: 31, 88, null, null
+//Mutated file region: 52, 117, null, null
+//CodeQL original results: [643]
+//Snyk original results: [643]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: [563]
+//Snyk analysis results: [643]
+//Insider analysis results: [316]
+//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_14.cs
+//Original file CWE's: [643]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/reflection/reflection with name simple_reflection_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -46,6 +63,14 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_14531028 : AbstractTestCase
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    try {
+                        var type = typeof(ReflectionHelper);
+                        var rh = (ReflectionHelper)type.GetConstructors()[0].Invoke(new object[] { data });
+                        type.GetFields()[0].SetValue(rh, "qutUaTdDJPFi7C3a3eZf8ltdLsQsxJLcDwknOl5kh72JfGhsfbfV");
+                        data = rh.getValue();
+                    } catch (Exception e) {
+                        throw;
+                    }
                 }
             }
         }
@@ -87,14 +112,6 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_14531028 : AbstractTestCase
                 string query = "//users/user[name/text()='" + username +
                                "' and pass/text()='" + password + "']" +
                                "/secret/text()";
-try {
-    var type = typeof(ReflectionHelper);
-    var rh = (ReflectionHelper)type.GetConstructors()[0].Invoke(new object[] { query });
-    type.GetFields()[0].SetValue(rh, "qutUaTdDJPFi7C3a3eZf8ltdLsQsxJLcDwknOl5kh72JfGhsfbfV");
-    query = rh.getValue();
-} catch (Exception e) {
-    throw;
-}
                 string secret = (string)xPath.Evaluate(query);
             }
         }

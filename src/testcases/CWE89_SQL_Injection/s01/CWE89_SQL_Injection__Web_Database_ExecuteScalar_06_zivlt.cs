@@ -1,3 +1,20 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 55, 124, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/operators/operators with name unary_operator_minus_call_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -50,9 +67,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06106808 : Abstract
                 {
                     /* setup the connection */
 
-var operators1943 = new SpecialOperatorsStringHolder(data);
-var srotarepo3491 = -operators1943;
-data = srotarepo3491.ToString();
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -65,6 +79,9 @@ data = srotarepo3491.ToString();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var operators1943 = new SpecialOperatorsStringHolder(data);
+                                var srotarepo3491 = -operators1943;
+                                data = srotarepo3491.ToString();
                             }
                         }
                     }

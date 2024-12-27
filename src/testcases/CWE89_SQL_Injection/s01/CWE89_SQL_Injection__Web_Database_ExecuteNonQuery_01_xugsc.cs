@@ -1,3 +1,20 @@
+//Original file region: 30, 88, null, null
+//Mutated file region: 49, 110, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/for with name for_operator_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -38,9 +55,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01504391 : Abstra
         data = ""; /* Initialize data */
         /* Read data from a database */
         {
-for (int i = 0; i < 209676123; i++) {
-    data = "";
-}
             try
             {
                 /* setup the connection */
@@ -74,6 +88,9 @@ for (int i = 0; i < 209676123; i++) {
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                    for (int i = 0; i < 209676123; i++) {
+                        data = "";
+                    }
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();
                     if (result != null)

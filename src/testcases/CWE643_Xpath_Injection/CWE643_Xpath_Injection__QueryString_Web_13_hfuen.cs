@@ -1,3 +1,20 @@
+//Original file region: 31, 88, null, null
+//Mutated file region: 51, 110, null, null
+//CodeQL original results: [643]
+//Snyk original results: [643]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: [643, 563]
+//Snyk analysis results: []
+//Insider analysis results: [316]
+//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_13.cs
+//Original file CWE's: [643]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/virtuality/class with name derived_binary_op2_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -45,6 +62,8 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_13580555 : AbstractTestCase
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
+                    data = a12341.VirtualCall(data, "");
                 }
             }
         }
@@ -86,8 +105,6 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_13580555 : AbstractTestCase
                 string query = "//users/user[name/text()='" + username +
                                "' and pass/text()='" + password + "']" +
                                "/secret/text()";
-BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
-query = a12341.VirtualCall(query, "");
                 string secret = (string)xPath.Evaluate(query);
             }
         }

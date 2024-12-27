@@ -1,3 +1,18 @@
+//Original file region: 30, 89, null, null
+//Mutated file region: 47, 112, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_42.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/for with name for_operator_continue_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -68,12 +83,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_42170416 : Abstract
     public override void Bad(HttpRequest req, HttpResponse resp)
     {
         string data = BadSource(req, resp);
-for (int i = 0; i < -401109018; i++) {
-    if (false) {
-        continue;
-    }
-    data = "";
-}
         try
         {
             using (SqlConnection dbConnection = IO.GetDBConnection())
@@ -82,6 +91,12 @@ for (int i = 0; i < -401109018; i++) {
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                    for (int i = 0; i < 123; i++) {
+                        if (false) {
+                            continue;
+                        }
+                        data = "";
+                    }
                     badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                     object firstCol = badSqlCommand.ExecuteScalar();
                     if (firstCol != null)

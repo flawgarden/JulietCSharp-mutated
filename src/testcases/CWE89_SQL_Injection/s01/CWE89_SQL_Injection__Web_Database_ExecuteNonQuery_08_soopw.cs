@@ -1,3 +1,20 @@
+//Original file region: 43, 113, null, null
+//Mutated file region: 63, 135, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/regex with name regex_replace_with_substitution_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -59,8 +76,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08881735 : Abstra
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-var regex42 = @".+(?<grp>aboba)\z";
-data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -71,6 +86,8 @@ data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var regex42 = @".+(?<grp>aboba)\z";
+data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                             }
                         }
                     }

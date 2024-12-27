@@ -1,3 +1,20 @@
+//Original file region: 35, 105, null, null
+//Mutated file region: 54, 133, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/switch with name switch_operator_any_negative
+// Used extensions: ~[MACRO_Any_string@1002]~ -> ~[VAR_string@1001]~ | ~[MACRO_Any_string@1002]~ -> ~[VAR_string@1001]~
 using System;
 using System.Linq;
 using System.Collections;
@@ -50,15 +67,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07299120 : Abstra
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-string tmpUnique42 = "";
-switch (data) {
-    case "uwt8tIzn8RBc52WWflYg1OMhE7xGuHK":
-        data = "";
-        break;
-    default:
-        data = tmpUnique42;
-        break;
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -69,6 +77,15 @@ switch (data) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                string tmpUnique42 = "";
+                                switch (data) {
+                                    case "uwt8tIzn8RBc52WWflYg1OMhE7xGuHK":
+                                        data = "";
+                                        break;
+                                    default:
+                                        data = tmpUnique42;
+                                        break;
+                                }
                             }
                         }
                     }

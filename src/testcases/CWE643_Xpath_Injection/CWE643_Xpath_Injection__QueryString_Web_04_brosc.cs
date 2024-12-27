@@ -1,3 +1,20 @@
+//Original file region: 38, 95, null, null
+//Mutated file region: 57, 117, null, null
+//CodeQL original results: [643]
+//Snyk original results: [643]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: [835, 563]
+//Snyk analysis results: [643]
+//Insider analysis results: [316]
+//Original file name: src/testcases/CWE643_Xpath_Injection/CWE643_Xpath_Injection__QueryString_Web_04.cs
+//Original file CWE's: [643]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/conditional/while with name while_operator_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -48,12 +65,12 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_04245303 : AbstractTestCase
             data = ""; /* initialize data in case id is not in query string */
             /* POTENTIAL FLAW: Parse id param out of the URL querystring (without using getParameter()) */
             {
-while (PRIVATE_CONST_TRUE) {
-    data = "";
-}
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    while (PRIVATE_CONST_TRUE) {
+    data = "";
+}
                 }
             }
         }

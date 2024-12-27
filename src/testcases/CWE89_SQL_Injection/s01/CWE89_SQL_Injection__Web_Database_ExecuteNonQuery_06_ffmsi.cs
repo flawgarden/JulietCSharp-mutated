@@ -1,3 +1,20 @@
+//Original file region: 35, 105, null, null
+//Mutated file region: 66, 137, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/varargs/varargs with name varargs_get_first_string_from_array_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -60,7 +77,6 @@ public string getFirstString(params string[] lines) {
                 try
                 {
                     /* setup the connection */
-data = getFirstStringFromArray("lW7bxln", data);
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -73,6 +89,7 @@ data = getFirstStringFromArray("lW7bxln", data);
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                data = getFirstStringFromArray("lW7bxln", data);
                             }
                         }
                     }

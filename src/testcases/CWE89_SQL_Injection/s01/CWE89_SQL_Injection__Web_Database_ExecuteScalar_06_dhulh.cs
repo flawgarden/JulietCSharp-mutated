@@ -1,3 +1,18 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 64, 130, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/varargs/varargs with name varargs_get_first_string_from_array_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -72,6 +87,8 @@ public string getFirstString(params string[] lines) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+data = getFirstStringFromArray("fbJB3XW", data);
+
                             }
                         }
                     }
@@ -86,7 +103,6 @@ public string getFirstString(params string[] lines) {
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-data = getFirstStringFromArray("fbJB3XW", data);
             data = null;
         }
         if (PRIVATE_CONST_FIVE==5)

@@ -1,3 +1,20 @@
+//Original file region: 36, 101, null, null
+//Mutated file region: 56, 127, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_05.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/exceptions/causeThrows with name array_store_exception_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -61,13 +78,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_05121938 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-try {
+                                data = dr.GetString(1);
+                                try {
     object[] x = new string[3];
     x[0] = 0;
 } catch (ArrayTypeMismatchException e) {
     data = "";
 }
-                                data = dr.GetString(1);
                             }
                         }
                     }

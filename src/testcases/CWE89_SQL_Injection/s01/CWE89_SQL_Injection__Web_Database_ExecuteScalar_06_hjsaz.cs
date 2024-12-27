@@ -1,3 +1,20 @@
+//Original file region: 35, 100, null, null
+//Mutated file region: 54, 124, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [835, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/queue with name queue_poll_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -86,6 +103,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06588851 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var queue42 = new Queue<string>();
+queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
+queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
+queue42.Enqueue(data);
+data = queue42.Dequeue();
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -97,11 +119,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06588851 : Abstract
             }
             catch (SqlException exceptSql)
             {
-var queue42 = new Queue<string>();
-queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
-queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
-queue42.Enqueue(data);
-data = queue42.Dequeue();
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

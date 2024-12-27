@@ -1,3 +1,20 @@
+//Original file region: 30, 88, null, null
+//Mutated file region: 51, 136, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [391, 390, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_41.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/concurrency/atomic with name atomic_integer_restore_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -68,7 +85,19 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_41774656 : Abstract
             try
             {
                 /* setup the connection */
-int counter = 0;
+                using (SqlConnection connection = IO.GetDBConnection())
+                {
+                    connection.Open();
+                    /* prepare and execute a (hardcoded) query */
+                    using (SqlCommand command = new SqlCommand(null, connection))
+                    {
+                        command.CommandText = "select name from users where id=0";
+                        command.Prepare();
+                        using (SqlDataReader dr = command.ExecuteReader())
+                        {
+                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
+                            data = dr.GetString(1);
+                            int counter = 0;
 string stringCopy = data;
 
 if (counter == 0) {
@@ -95,18 +124,6 @@ try {
   thread2.Join();
 } catch (ThreadInterruptedException e) {
 }
-                using (SqlConnection connection = IO.GetDBConnection())
-                {
-                    connection.Open();
-                    /* prepare and execute a (hardcoded) query */
-                    using (SqlCommand command = new SqlCommand(null, connection))
-                    {
-                        command.CommandText = "select name from users where id=0";
-                        command.Prepare();
-                        using (SqlDataReader dr = command.ExecuteReader())
-                        {
-                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-                            data = dr.GetString(1);
                         }
                     }
                 }

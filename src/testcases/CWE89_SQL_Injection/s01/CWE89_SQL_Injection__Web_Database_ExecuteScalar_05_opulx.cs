@@ -1,3 +1,20 @@
+//Original file region: 36, 101, null, null
+//Mutated file region: 56, 124, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteScalar_05.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/operators/operators with name indexer_one_dim_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -62,6 +79,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_05957163 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var operators1943 = new SpecialOperatorsStringHolder(data);
+data = operators1943[0];
                             }
                         }
                     }
@@ -69,8 +88,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_05957163 : Abstract
                 catch (SqlException exceptSql)
                 {
 
-var operators1943 = new SpecialOperatorsStringHolder(data);
-data = operators1943[0];
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

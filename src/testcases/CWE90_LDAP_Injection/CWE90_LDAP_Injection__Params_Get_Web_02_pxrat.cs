@@ -1,3 +1,20 @@
+//Original file region: 29, 57, null, null
+//Mutated file region: 49, 89, null, null
+//CodeQL original results: [90]
+//Snyk original results: [90]
+//Semgrep original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: []
+//CodeQL analysis results: [835, 563]
+//Snyk analysis results: [90]
+//Insider analysis results: []
+//Original file name: src/testcases/CWE90_LDAP_Injection/CWE90_LDAP_Injection__Params_Get_Web_02.cs
+//Original file CWE's: [90]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/varargs/varargs with name varargs_with_generics_negative
+// Used extensions: ~[EXPR_string@1001]~ -> String.Intern(~[EXPR_string@1001]~)
 using System;
 using System.Linq;
 using System.Collections;
@@ -61,7 +78,7 @@ public string getFirstString(params string[] lines) {
         using (DirectoryEntry de = new DirectoryEntry())
         {
             /* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
-data = varargsWithGenerics(String.Intern(data), "2NB47EJmdLm0UdMNRbQjrogJqz6CUI794QdyaE668UU");
+data = varargsWithGenerics(data, "2NB47EJmdLm0UdMNRbQjrogJqz6CUI794QdyaE668UU");
             using (DirectorySearcher search = new DirectorySearcher(de))
             {
                 search.Filter = "(&(objectClass=user)(employeename=" + data + "))";

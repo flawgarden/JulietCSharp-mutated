@@ -1,3 +1,20 @@
+//Original file region: 38, 118, null, null
+//Mutated file region: 57, 139, null, null
+//Semgrep original results: [89]
+//CodeQL original results: [89]
+//Snyk original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: [404, 459, 460, 835, 563]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_06.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/assignment with name assignment_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -60,6 +77,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_06440141 : Abst
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+                            string tmpUnique42 = "";
+data = tmpUnique42;
                         }
                     }
                 }
@@ -69,8 +88,7 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_06440141 : Abst
                 }
                 finally
                 {
-string tmpUnique42 = "";
-data = tmpUnique42;
+
                     if (listener != null)
                     {
                         try

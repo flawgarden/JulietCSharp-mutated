@@ -1,3 +1,20 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 50, 123, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//CodeQL original results: []
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//CodeQL analysis results: []
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Mutation info: Insert template from sensitivity/collections/streams with name stream_map_negative 
+//Used extensions: 
+//Program:
 using System;
 using System.Linq;
 using System.Collections;
@@ -41,9 +58,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14312732 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-ICollection<string> stream42 = new List<string>();
-stream42.Add(data);
-data = stream42.Select(entry111 => "42").First();
                 try
                 {
                     /* setup the connection */
@@ -59,6 +73,9 @@ data = stream42.Select(entry111 => "42").First();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                ICollection<string> stream42 = new List<string>();
+stream42.Add(data);
+data = stream42.Select(entry111 => "42").First();
                             }
                         }
                     }

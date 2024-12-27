@@ -1,3 +1,18 @@
+//Original file region: 30, 100, null, null
+//Mutated file region: 48, 124, null, null
+//Semgrep original results: [89]
+//Snyk original results: [89]
+//Insider original results: []
+//-------------
+//Semgrep analysis results: [89]
+//Snyk analysis results: []
+//Insider analysis results: []
+//Original file name: src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09.cs
+//Original file CWE's: [89]  
+//Original file kind: fail
+//Program:
+// Mutation info: Insert template from sensitivity/exceptions/causeThrows with name null_pointer_exception_negative
+// Used extensions: 
 using System;
 using System.Linq;
 using System.Collections;
@@ -41,12 +56,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09835527 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-try {
-    string s42 = null;
-    var i42 = s42.Length;
-} catch (NullReferenceException e) {
-    data = "";
-}
+
                 try
                 {
                     /* setup the connection */
@@ -62,6 +72,12 @@ try {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                try {
+    string s42 = null;
+    var i42 = s42.Length;
+} catch (NullReferenceException e) {
+    data = "";
+}
                             }
                         }
                     }
