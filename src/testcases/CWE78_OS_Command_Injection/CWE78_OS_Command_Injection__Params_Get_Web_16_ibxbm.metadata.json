@@ -1,0 +1,31 @@
+{
+    "original_file_metadata": {
+        "file_name": "src/testcases/CWE78_OS_Command_Injection/CWE78_OS_Command_Injection__Params_Get_Web_16.cs",
+        "CWEs": [
+            78
+        ],
+        "kind": "fail",
+        "region": {
+            "start_line": 30,
+            "end_line": 56,
+            "start_column": null,
+            "end_column": null
+        }
+    },
+    "mutated_file_metadata": {
+        "used_templates": [
+            {
+                "template_file": "sensitivity/struct/anonstructures",
+                "template_name": "anonymous_structure_with_nested_fields_negative"
+            }
+        ],
+        "used_extensions": [],
+        "region": {
+            "start_line": 34,
+            "end_line": 71,
+            "start_column": null,
+            "end_column": null
+        },
+        "kind": "pass"
+    }
+}
