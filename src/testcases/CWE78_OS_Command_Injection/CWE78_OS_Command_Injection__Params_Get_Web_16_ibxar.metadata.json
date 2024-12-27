@@ -16,7 +16,7 @@
         "used_templates": [
             {
                 "template_file": "sensitivity/collections/yield",
-                "template_name": "generator_infinite_positive"
+                "template_name": "generator_infinite_negative"
             }
         ],
         "used_extensions": [],
