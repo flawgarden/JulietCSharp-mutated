@@ -15,7 +15,7 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/abstract",
+                "template_file": "sensitivity/cSharpAbstractions/abstract",
                 "template_name": "shadowed_accessed_as_abstract_positive"
             }
         ],
@@ -32,11 +32,12 @@
             "~[MACRO_VirtualizedName@1003]~ -> virtual666"
         ],
         "region": {
-            "start_line": 36,
-            "end_line": 102,
+            "start_line": 38,
+            "end_line": 104,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

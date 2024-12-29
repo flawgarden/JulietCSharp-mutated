@@ -89,11 +89,11 @@ public string getFirstString(params string[] lines) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        data = combineStrings(data, data.Trim());
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {
-data = combineStrings(data, data.Trim());
                             IO.WriteLine("Name, " + data +", updated successfully");
                         }
                         else

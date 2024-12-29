@@ -89,6 +89,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04281278 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        string tmpUnique42 = data;
+                        string[] stringArray = {"mu9wc12w1lr3AGt6WzFohThWdCNEV89n", "DMI2lwU1tSxsGQA0jPKrSNmTZnxa2mD2MlpuO7e2NcyEpUGxVIaX1G"};
+                        for (int i = 0; i < stringArray.Length - 1; i++) {
+                            if (stringArray[i] == stringArray[i + 1]) {
+                                data = tmpUnique42;
+                            }
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -104,13 +111,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04281278 : Abstra
             }
             catch (SqlException exceptSql)
             {
-string tmpUnique42 = data;
-string[] stringArray = {"mu9wc12w1lr3AGt6WzFohThWdCNEV89n", "DMI2lwU1tSxsGQA0jPKrSNmTZnxa2mD2MlpuO7e2NcyEpUGxVIaX1G"};
-for (int i = 0; i < stringArray.Length; i++) {
-    if (stringArray[i] == stringArray[i + 1]) {
-        data = tmpUnique42;
-    }
-}
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

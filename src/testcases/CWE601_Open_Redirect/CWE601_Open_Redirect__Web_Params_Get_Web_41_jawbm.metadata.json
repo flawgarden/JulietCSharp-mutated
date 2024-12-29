@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/extensionMethods",
+                "template_file": "sensitivity/cSharpAbstractions/extensionMethods",
                 "template_name": "extension_method_argless_negative_2"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 30,
-            "end_line": 64,
+            "start_line": 32,
+            "end_line": 66,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

@@ -43,9 +43,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_01230626 : Abstract
             {
                 /* setup the connection */
 
-ExplicitConversionalHolder.givenIndex = 42;
-var conversion14 = new ExplicitConversionalHolder(data);
-data = (string)conversion14;
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
                     connection.Open();
@@ -58,6 +55,9 @@ data = (string)conversion14;
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            ExplicitConversionalHolder.givenIndex = 42;
+var conversion14 = new ExplicitConversionalHolder(data);
+data = (string)conversion14;
                         }
                     }
                 }

@@ -72,6 +72,8 @@ public string getFirstString(params string[] lines) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+data = getFirstStringFromArray("fbJB3XW", data);
+
                             }
                         }
                     }
@@ -86,7 +88,6 @@ public string getFirstString(params string[] lines) {
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-data = getFirstStringFromArray("fbJB3XW", data);
             data = null;
         }
         if (PRIVATE_CONST_FIVE==5)

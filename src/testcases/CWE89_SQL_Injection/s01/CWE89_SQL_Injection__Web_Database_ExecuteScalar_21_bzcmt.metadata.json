@@ -15,7 +15,7 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/anonymous",
+                "template_file": "sensitivity/cSharpAbstractions/anonymous",
                 "template_name": "tuple_deconstruction_negative"
             }
         ],
@@ -30,11 +30,12 @@
             "~[MACRO_AnonTypeVarName@1002]~ -> anon42342"
         ],
         "region": {
-            "start_line": 35,
-            "end_line": 100,
+            "start_line": 37,
+            "end_line": 102,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

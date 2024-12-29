@@ -81,29 +81,29 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_21402335 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var tmp42 = data;
+                        int[] tmpArray42 = [0, 1, 2, 3, 4];
+                        var index = -1;
+                        try
+                        {
+                            try
+                            {
+                                var tmp43 = tmpArray42[index];
+                            }
+                            catch (IndexOutOfRangeException e)
+                            {
+                                data = tmp42;
+                                throw;
+                            }
+                        }
+                        catch (IndexOutOfRangeException e)
+                        {
+                            data = "data";
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {
-var tmp42 = data;
-int[] tmpArray42 = [0, 1, 2, 3, 4];
-var index = -1;
-try
-{
-    try
-    {
-        var tmp43 = tmpArray42[index];
-    }
-    catch (IndexOutOfRangeException e)
-    {
-        data = tmp42;
-        throw;
-    }
-}
-catch (IndexOutOfRangeException e)
-{
-    data = "data";
-}
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */
                         }
                     }

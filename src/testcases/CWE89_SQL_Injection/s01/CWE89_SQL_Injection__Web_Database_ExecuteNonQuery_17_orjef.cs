@@ -65,11 +65,11 @@ IEnumerable<string> YieldId(string x) {
                     {
                         command.CommandText = "select name from users where id=0";
                         command.Prepare();
-data = YieldMultiple("42", data).First();
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+data = YieldMultiple("42", data).First();
                         }
                     }
                 }

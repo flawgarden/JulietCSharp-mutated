@@ -55,7 +55,7 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
 string[] arr524 = { "3CfXT42", data, data };
 fixed (string* ptr524 = arr524)
 {
-    data = *(ptr524 + 2);
+    data = *(ptr524 + 0);
 }
         /* POTENTIAL FLAW: command injection */
         Process process = Process.Start(osCommand + data);

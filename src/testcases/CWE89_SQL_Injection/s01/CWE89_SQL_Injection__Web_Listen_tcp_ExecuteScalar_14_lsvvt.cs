@@ -56,6 +56,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_14674174 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+data = strs.Concat("42", "42");
+
                         }
                     }
                 }
@@ -65,7 +67,6 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_14674174 : Abstra
                 }
                 finally
                 {
-data = strs.Concat("42", "42");
                     if (listener != null)
                     {
                         try

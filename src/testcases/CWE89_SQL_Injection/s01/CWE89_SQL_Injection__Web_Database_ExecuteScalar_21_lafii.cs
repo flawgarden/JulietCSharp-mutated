@@ -63,10 +63,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_21856117 : Abstract
             }
             catch (SqlException exceptSql)
             {
-string[] tmpArrayUnique42 = {"", "", "", ""};
-tmpArrayUnique42[0] = data;
-ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
-data = ah.values[1];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }
@@ -85,6 +81,10 @@ data = ah.values[1];
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        string[] tmpArrayUnique42 = {"", "", "", ""};
+                        tmpArrayUnique42[0] = data;
+                        ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
+                        data = ah.values[1];
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();

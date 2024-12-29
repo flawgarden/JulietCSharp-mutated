@@ -51,14 +51,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07975582 : Abstra
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
 
-var outer1094 = "";
-Action<string> action194392_pos = (string s) => outer1094 += s;
-Action<string> action194392_neg = (string s) => outer1094 += " ";
-Action<string> action194392 = action194392_pos + action194392_neg;
-
-action194392 -= action194392_pos;
-action194392(data);
-data = outer1094;
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -69,6 +61,14 @@ data = outer1094;
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var outer1094 = "";
+Action<string> action194392_pos = (string s) => outer1094 += s;
+Action<string> action194392_neg = (string s) => outer1094 += " ";
+Action<string> action194392 = action194392_pos + action194392_neg;
+
+action194392 -= action194392_pos;
+action194392(data);
+data = outer1094;
                             }
                         }
                     }

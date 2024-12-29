@@ -84,6 +84,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41690196 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+data = ("QOgsFQy8dR").ReturnArg("v3jcepfxs");
                         }
                     }
                 }
@@ -91,7 +92,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41690196 : Abstra
             catch (SqlException exceptSql)
             {
 
-data = ("QOgsFQy8dR").ReturnArg("v3jcepfxs");
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

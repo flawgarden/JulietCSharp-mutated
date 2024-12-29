@@ -51,13 +51,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10458198 : Abstra
                         {
                             command.CommandText = "select name from users where id=0";
                             command.Prepare();
-var list42 = new List<string>();
-list42.Add("RTsZO4qdi");
-data =list42.ToArray()[0];
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var list42 = new List<string>();
+list42.Add("RTsZO4qdi");
+data =list42.ToArray()[0];
                             }
                         }
                     }

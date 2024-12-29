@@ -46,12 +46,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03957622 : Abstract
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-ISet<string> set42 = new HashSet<string>();
-set42.Add("awesome string");
-set42.Add(data);
-if (set42.Count == 2) {
-    data = "42";
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -62,6 +56,12 @@ if (set42.Count == 2) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                ISet<string> set42 = new HashSet<string>();
+set42.Add("awesome string");
+set42.Add(data);
+if (set42.Count == 2) {
+    data = "42";
+}
                             }
                         }
                     }

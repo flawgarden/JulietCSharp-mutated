@@ -100,8 +100,8 @@ public string getFirstString(params string[] lines) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        data = getFirstString(data, data);
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
-data = getFirstString(data, data);
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {

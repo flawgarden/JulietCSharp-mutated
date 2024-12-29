@@ -89,6 +89,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45623281 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            var operators1943 = new SpecialOperatorsStringHolder("rmHJf2VkldQ3xHbSVU2wzm4BMoDYiEspkmp0M1cU0KA8TkYRZjOf5uDFsF70y7BgulSLbkGe2i6om5rlQv99zMuzi");
+                            data = operators1943[42, data];
                         }
                     }
                 }
@@ -96,8 +98,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45623281 : Abstra
             catch (SqlException exceptSql)
             {
 
-var operators1943 = new SpecialOperatorsStringHolder("rmHJf2VkldQ3xHbSVU2wzm4BMoDYiEspkmp0M1cU0KA8TkYRZjOf5uDFsF70y7BgulSLbkGe2i6om5rlQv99zMuzi");
-dataBad = operators1943[42, dataBad];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

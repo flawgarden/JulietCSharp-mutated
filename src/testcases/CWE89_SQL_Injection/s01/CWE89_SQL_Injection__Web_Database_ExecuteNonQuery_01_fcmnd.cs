@@ -38,25 +38,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01389847 : Abstra
         data = ""; /* Initialize data */
         /* Read data from a database */
         {
-var tmp42 = data;
-int[] tmpArray42 = [0, 1, 2, 3, 4];
-var index = -1;
-try
-{
-    try
-    {
-        var tmp43 = tmpArray42[index];
-    }
-    catch (IndexOutOfRangeException e)
-    {
-        data = tmp42;
-        throw;
-    }
-}
-catch (IndexOutOfRangeException e)
-{
-    data = "data";
-}
             try
             {
                 /* setup the connection */
@@ -90,6 +71,25 @@ catch (IndexOutOfRangeException e)
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                    var tmp42 = data;
+                    int[] tmpArray42 = [0, 1, 2, 3, 4];
+                    var index = -1;
+                    try
+                    {
+                        try
+                        {
+                            var tmp43 = tmpArray42[index];
+                        }
+                        catch (IndexOutOfRangeException e)
+                        {
+                            data = tmp42;
+                            throw;
+                        }
+                    }
+                    catch (IndexOutOfRangeException e)
+                    {
+                        data = "data";
+                    }
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();
                     if (result != null)

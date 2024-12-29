@@ -70,14 +70,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03134390 : Abstra
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-string tmpUnique42 = data;
-try {
-  throw new Exception1(data);
-} catch (Exception1 e) {
-    data = tmpUnique42;
-} finally {
-    data = "";
-}
             data = null;
         }
         if (5==5)
@@ -91,6 +83,14 @@ try {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        string tmpUnique42 = data;
+                        try {
+                        throw new Exception1(data);
+                        } catch (Exception1 e) {
+                            data = tmpUnique42;
+                        } finally {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

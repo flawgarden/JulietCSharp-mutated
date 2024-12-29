@@ -45,25 +45,25 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41768206 : Abstra
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                    Wrapper<string> w = new Wrapper<string>(data);
+                    var task1 = new SettingTask(w, "");
+                    var task2 = new SettingTask(w, data);
+                    Thread thread1 = new Thread(task1.run);
+                    Thread thread2 = new Thread(task2.run);
+                    thread2.Start();
+                    try {
+                    thread2.Join();
+                    } catch (ThreadInterruptedException e) {
+                    }
+
+                    thread1.Start();
+                    try {
+                    thread1.Join();
+                    } catch (ThreadInterruptedException e) {
+                    }
+                    data = w.i;
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();
-Wrapper<string> w = new Wrapper<string>(data);
-var task1 = new SettingTask(w, "");
-var task2 = new SettingTask(w, data);
-Thread thread1 = new Thread(task1.run);
-Thread thread2 = new Thread(task2.run);
-thread2.Start();
-try {
-  thread2.Join();
-} catch (ThreadInterruptedException e) {
-}
-
-thread1.Start();
-try {
-  thread1.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                     if (result != null)
                     {
                         IO.WriteLine("Name, " + data +", updated successfully");

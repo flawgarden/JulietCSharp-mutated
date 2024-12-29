@@ -76,13 +76,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09746554 : Abstra
             int? result = null;
             try
             {
-string tmpUnique42 = data;
-string[] stringArray = {data};
-for (int i = 0; i < stringArray.Length; i++) {
-    if (stringArray[i] == stringArray[i + 1]) {
-        data = tmpUnique42;
-    }
-}
+                string tmpUnique42 = data;
+                string[] stringArray = {data, data};
+                for (int i = 0; i < stringArray.Length - 1; i++) {
+                    if (stringArray[i] == stringArray[i + 1]) {
+                        data = tmpUnique42;
+                    }
+                }
                 using (SqlConnection dbConnection = IO.GetDBConnection())
                 {
                     dbConnection.Open();

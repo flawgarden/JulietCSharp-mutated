@@ -60,7 +60,6 @@ public string getFirstString(params string[] lines) {
                 try
                 {
                     /* setup the connection */
-data = getFirstStringFromArray("lW7bxln", data);
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -73,6 +72,7 @@ data = getFirstStringFromArray("lW7bxln", data);
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                data = getFirstStringFromArray("lW7bxln", data);
                             }
                         }
                     }

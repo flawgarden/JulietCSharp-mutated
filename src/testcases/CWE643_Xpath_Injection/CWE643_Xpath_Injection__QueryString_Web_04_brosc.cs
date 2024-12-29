@@ -48,12 +48,12 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_04245303 : AbstractTestCase
             data = ""; /* initialize data in case id is not in query string */
             /* POTENTIAL FLAW: Parse id param out of the URL querystring (without using getParameter()) */
             {
-while (PRIVATE_CONST_TRUE) {
-    data = "";
-}
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    while (PRIVATE_CONST_TRUE) {
+    data = "";
+}
                 }
             }
         }

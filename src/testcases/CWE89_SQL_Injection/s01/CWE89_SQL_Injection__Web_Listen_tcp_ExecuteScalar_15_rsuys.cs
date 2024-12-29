@@ -58,6 +58,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15176804 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+                            var constrained09143 = new InheritanceConstrainedClass<DerivedBinaryOpClass1, BaseBinaryOpClass>(new DerivedBinaryOpClass1());
+data = constrained09143.ChooseNone(data, "DrqjjCbIP9mZzqoWeznT1tG2yevv");
                         }
                     }
                 }
@@ -68,8 +70,6 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15176804 : Abstra
                 finally
                 {
 
-var constrained09143 = new InheritanceConstrainedClass<DerivedBinaryOpClass1, BaseBinaryOpClass>(new DerivedBinaryOpClass1());
-data = constrained09143.ChooseNone(data, "DrqjjCbIP9mZzqoWeznT1tG2yevv");
                     if (listener != null)
                     {
                         try

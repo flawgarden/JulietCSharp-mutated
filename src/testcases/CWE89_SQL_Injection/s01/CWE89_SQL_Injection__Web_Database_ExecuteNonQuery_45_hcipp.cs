@@ -44,13 +44,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45231520 : Abstra
         try
         {
 
-var abstract999 = new ClassInverted();
-dataBad = abstract999.NonOverriddenPositive(dataBad);
+
             using (SqlConnection dbConnection = IO.GetDBConnection())
             {
                 dbConnection.Open();
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
+                    var abstract999 = new ClassInverted();
+                    data = abstract999.NonOverriddenPositive(data);
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();

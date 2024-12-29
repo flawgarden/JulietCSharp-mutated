@@ -48,7 +48,7 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
 string[] arr524 = { data, data, data };
 fixed (string* ptr524 = arr524)
 {
-    data = *(ptr524 + 2);
+    data = *(ptr524 + 0);
 }
                 dbConnection.Open();
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))

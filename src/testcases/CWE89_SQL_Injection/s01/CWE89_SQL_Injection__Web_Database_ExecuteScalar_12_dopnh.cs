@@ -81,11 +81,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_12183357 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var abstract999 = new ClassInherited();
+data = abstract999.OverriddenPositive("WzWeTeOxwRCwea6hFmlkTtWf3uMIFxdSX8UiI04vfgqHxXTJu1D9u9Vnd0ljSGr9yuYf");
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
 
-var abstract999 = new ClassInherited();
-data = abstract999.OverriddenPositive("WzWeTeOxwRCwea6hFmlkTtWf3uMIFxdSX8UiI04vfgqHxXTJu1D9u9Vnd0ljSGr9yuYf");
                         if (firstCol != null)
                         {
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */

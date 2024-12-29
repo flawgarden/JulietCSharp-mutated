@@ -40,14 +40,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_12607177 : Abstract
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-string tmpUnique42 = "";
-for (int i = 0; i < data.Length; i++) {
-    char c = data[i];
-    tmpUnique42 = tmpUnique42 + c;
-    if (i + 1 == data.Length) {
-        data = "";
-    }
-}
                 try
                 {
                     /* setup the connection */
@@ -88,6 +80,14 @@ for (int i = 0; i < data.Length; i++) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        string tmpUnique42 = "";
+                        for (int i = 0; i < data.Length; i++) {
+                            char c = data[i];
+                            tmpUnique42 = tmpUnique42 + c;
+                            if (i + 1 == data.Length) {
+                                data = "";
+                            }
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)

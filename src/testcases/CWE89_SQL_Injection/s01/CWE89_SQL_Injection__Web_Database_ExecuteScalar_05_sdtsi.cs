@@ -61,13 +61,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_05121938 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-try {
+                                data = dr.GetString(1);
+                                try {
     object[] x = new string[3];
     x[0] = 0;
 } catch (ArrayTypeMismatchException e) {
     data = "";
 }
-                                data = dr.GetString(1);
                             }
                         }
                     }

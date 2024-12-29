@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/partial",
+                "template_file": "sensitivity/cSharpAbstractions/partial",
                 "template_name": "partial_field_reassign_negative"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 33,
-            "end_line": 82,
+            "start_line": 35,
+            "end_line": 84,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

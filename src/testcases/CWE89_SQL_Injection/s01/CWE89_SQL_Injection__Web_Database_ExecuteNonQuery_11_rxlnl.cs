@@ -83,6 +83,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11916882 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        ISet<string> set111 = new HashSet<string>();
+                        ISet<string> set222 = new HashSet<string>();
+                        set111.Add("awesome string");
+                        set222.Add(data);
+                        set111.UnionWith(set222);
+                        if (set111.Contains(data)) {
+                            data = "42";
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -98,14 +106,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11916882 : Abstra
             }
             catch (SqlException exceptSql)
             {
-ISet<string> set111 = new HashSet<string>();
-ISet<string> set222 = new HashSet<string>();
-set111.Add("awesome string");
-set222.Add(data);
-set111.UnionWith(set222);
-if (set111.Contains(data)) {
-    data = "42";
-}
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

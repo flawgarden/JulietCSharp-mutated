@@ -50,14 +50,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_14518444 : Abstract
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
-do {
-    data = "";
-} while (true);
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                do {
+                                    data = "";
+                                    break;
+                                } while (data.Length != 0);
                             }
                         }
                     }

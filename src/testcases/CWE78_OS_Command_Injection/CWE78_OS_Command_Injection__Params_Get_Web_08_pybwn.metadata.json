@@ -21,11 +21,12 @@
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 47,
-            "end_line": 94,
+            "start_line": 49,
+            "end_line": 96,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

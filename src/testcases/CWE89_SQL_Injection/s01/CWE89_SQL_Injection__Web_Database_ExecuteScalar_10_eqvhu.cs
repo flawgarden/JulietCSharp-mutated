@@ -45,13 +45,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_10627442 : Abstract
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-bool conditionMet = false;
-if (true) {
-    conditionMet = true;
-}
-if (!conditionMet && true) {
-    data = "";
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -62,6 +55,13 @@ if (!conditionMet && true) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                bool conditionMet = false;
+                                if (true) {
+                                    conditionMet = true;
+                                }
+                                if (!conditionMet && true) {
+                                    data = "";
+                                }
                             }
                         }
                     }

@@ -40,13 +40,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16591023 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-var queue42 = new Queue<string>();
-queue42.Enqueue(data);
-var value42 = queue42.Dequeue();
-if (queue42.Count == 0) {
-    value42 = "kBAjFt";
-}
-data = value42;
+
                 try
                 {
                     /* setup the connection */
@@ -62,6 +56,13 @@ data = value42;
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var queue42 = new Queue<string>();
+queue42.Enqueue(data);
+var value42 = queue42.Dequeue();
+if (queue42.Count == 0) {
+    value42 = "kBAjFt";
+}
+data = value42;
                             }
                         }
                     }

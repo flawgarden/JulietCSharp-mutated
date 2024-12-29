@@ -38,10 +38,11 @@ class MutatedCWE89_SQL_Injection__Web_Params_Get_Web_ExecuteNonQuery_11835481 : 
         if (IO.StaticReturnsTrue())
         {
             /* POTENTIAL FLAW: Read data from a querystring using Params.Get */
-while (true) {
-    data = "";
-}
             data = req.Params.Get("name");
+            while (true) {
+                data = "";
+                break;
+            }
         }
         else
         {

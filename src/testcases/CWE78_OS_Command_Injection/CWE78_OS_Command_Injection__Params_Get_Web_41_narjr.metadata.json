@@ -21,11 +21,12 @@
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 34,
-            "end_line": 65,
+            "start_line": 36,
+            "end_line": 67,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

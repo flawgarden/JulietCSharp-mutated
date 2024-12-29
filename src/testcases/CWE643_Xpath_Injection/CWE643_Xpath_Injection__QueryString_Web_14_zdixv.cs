@@ -46,6 +46,14 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_14531028 : AbstractTestCase
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    try {
+                        var type = typeof(ReflectionHelper);
+                        var rh = (ReflectionHelper)type.GetConstructors()[0].Invoke(new object[] { data });
+                        type.GetFields()[0].SetValue(rh, "qutUaTdDJPFi7C3a3eZf8ltdLsQsxJLcDwknOl5kh72JfGhsfbfV");
+                        data = rh.getValue();
+                    } catch (Exception e) {
+                        throw;
+                    }
                 }
             }
         }
@@ -87,14 +95,6 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_14531028 : AbstractTestCase
                 string query = "//users/user[name/text()='" + username +
                                "' and pass/text()='" + password + "']" +
                                "/secret/text()";
-try {
-    var type = typeof(ReflectionHelper);
-    var rh = (ReflectionHelper)type.GetConstructors()[0].Invoke(new object[] { query });
-    type.GetFields()[0].SetValue(rh, "qutUaTdDJPFi7C3a3eZf8ltdLsQsxJLcDwknOl5kh72JfGhsfbfV");
-    query = rh.getValue();
-} catch (Exception e) {
-    throw;
-}
                 string secret = (string)xPath.Evaluate(query);
             }
         }

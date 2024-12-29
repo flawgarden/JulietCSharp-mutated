@@ -75,8 +75,8 @@ public string paramOrEmpty(int value, string param) {
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-data = paramOrEmpty(-1, data);
                                 data = dr.GetString(1);
+                                data = paramOrEmpty(-1, data);
                             }
                         }
                     }

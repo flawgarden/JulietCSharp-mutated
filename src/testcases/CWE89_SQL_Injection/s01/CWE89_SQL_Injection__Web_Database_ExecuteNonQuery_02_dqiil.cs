@@ -83,6 +83,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_02365724 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var regex42 = @"(?<g1>kek)\k<g1>";
+                        var str42 = "kekkek";
+                        if (Regex.IsMatch(str42, regex42)) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -98,11 +103,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_02365724 : Abstra
             }
             catch (SqlException exceptSql)
             {
-var regex42 = @"(?<g1>kek)\k<g1>";
-var str42 = "kekkek";
-if (Regex.IsMatch(str42, regex42)) {
-    data = "";
-}
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

@@ -58,6 +58,9 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_17306785 : Abst
                     {
                         /* POTENTIAL FLAW: Read data using a listening tcp connection */
                         data = sr.ReadLine();
+                        var map42 = new Dictionary<string, string>();
+map42[data] = "const string";
+data = map42.First().Value;
                     }
                 }
             }
@@ -67,9 +70,6 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_17306785 : Abst
             }
             finally
             {
-var map42 = new Dictionary<string, string>();
-map42[data] = "const string";
-data = map42.First().Value;
                 if (listener != null)
                 {
                     try

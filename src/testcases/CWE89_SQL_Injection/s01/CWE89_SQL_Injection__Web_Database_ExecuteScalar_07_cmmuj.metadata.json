@@ -23,11 +23,12 @@
             " ~[EXPR_int@1001]~ -> ~[EXPR_string@1003]~.LastIndexOf(~[EXPR_string@1004]~, ~[EXPR_int@1001]~, ~[EXPR_int@1002]~)"
         ],
         "region": {
-            "start_line": 37,
-            "end_line": 106,
+            "start_line": 39,
+            "end_line": 108,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

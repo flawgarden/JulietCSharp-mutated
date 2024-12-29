@@ -46,6 +46,7 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
         {
             /* POTENTIAL FLAW: Read data from a querystring using Params.Get */
             data = req.Params.Get("name");
+            data = apply(&snd, data, data);
         }
         else
         {
@@ -54,7 +55,6 @@ public unsafe T apply<T>(delegate*<T, T, T> func, T a, T b) => func(a, b);
             data = null;
         }
 
-data = apply(&snd, data, data);
         if (IO.STATIC_READONLY_FIVE==5)
         {
             string xmlFile = null;

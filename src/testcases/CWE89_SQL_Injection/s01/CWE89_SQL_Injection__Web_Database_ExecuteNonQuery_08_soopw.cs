@@ -59,8 +59,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08881735 : Abstra
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-var regex42 = @".+(?<grp>aboba)\z";
-data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -71,6 +69,8 @@ data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var regex42 = @".+(?<grp>aboba)\z";
+data = Regex.Replace(data + "aboba", regex42, @"${grp}");
                             }
                         }
                     }

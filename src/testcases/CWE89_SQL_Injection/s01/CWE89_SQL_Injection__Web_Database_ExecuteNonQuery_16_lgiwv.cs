@@ -41,9 +41,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16818043 : Abstra
             /* Read data from a database */
             {
 
-var array139418 = new[]{ "ZZcHm1RcwLqQ4zUSl4Cx7BuEl3F9CSqSZZyMl3SKw", "2eBPRG4jD1xXXpXfswRZeeY0fAHrrl1BKX1kjox3HsnamBahNXjYeXJXGLuR8N2b9vNA", data };
-var yarra3141 = array139418[..1];
-data = yarra3141[0];
                 try
                 {
                     /* setup the connection */
@@ -59,6 +56,9 @@ data = yarra3141[0];
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var array139418 = new[]{ "ZZcHm1RcwLqQ4zUSl4Cx7BuEl3F9CSqSZZyMl3SKw", "2eBPRG4jD1xXXpXfswRZeeY0fAHrrl1BKX1kjox3HsnamBahNXjYeXJXGLuR8N2b9vNA", data };
+var yarra3141 = array139418[..1];
+data = yarra3141[0];
                             }
                         }
                     }

@@ -23,11 +23,12 @@
             " ~[EXPR_int@1001]~ -> 0x1a_b"
         ],
         "region": {
-            "start_line": 39,
-            "end_line": 113,
+            "start_line": 41,
+            "end_line": 115,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

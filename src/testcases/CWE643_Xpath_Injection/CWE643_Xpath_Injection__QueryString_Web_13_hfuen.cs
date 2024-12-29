@@ -45,6 +45,8 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_13580555 : AbstractTestCase
                 if (req.QueryString["id"] != null)
                 {
                     data = req.QueryString["id"];
+                    BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
+                    data = a12341.VirtualCall(data, "");
                 }
             }
         }
@@ -86,8 +88,6 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_13580555 : AbstractTestCase
                 string query = "//users/user[name/text()='" + username +
                                "' and pass/text()='" + password + "']" +
                                "/secret/text()";
-BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
-query = a12341.VirtualCall(query, "");
                 string secret = (string)xPath.Evaluate(query);
             }
         }

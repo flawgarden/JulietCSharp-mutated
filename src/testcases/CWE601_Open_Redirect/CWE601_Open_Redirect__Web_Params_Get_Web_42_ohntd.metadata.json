@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/anonymous",
+                "template_file": "sensitivity/cSharpAbstractions/anonymous",
                 "template_name": "named_anon_type_mutation_positive"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 29,
-            "end_line": 67,
+            "start_line": 31,
+            "end_line": 69,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

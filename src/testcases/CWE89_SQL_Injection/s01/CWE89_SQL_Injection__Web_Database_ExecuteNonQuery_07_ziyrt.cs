@@ -50,15 +50,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07299120 : Abstra
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-string tmpUnique42 = "";
-switch (data) {
-    case "uwt8tIzn8RBc52WWflYg1OMhE7xGuHK":
-        data = "";
-        break;
-    default:
-        data = tmpUnique42;
-        break;
-}
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -69,6 +60,15 @@ switch (data) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                string tmpUnique42 = "";
+                                switch (data) {
+                                    case "uwt8tIzn8RBc52WWflYg1OMhE7xGuHK":
+                                        data = "";
+                                        break;
+                                    default:
+                                        data = tmpUnique42;
+                                        break;
+                                }
                             }
                         }
                     }

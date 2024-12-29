@@ -82,12 +82,12 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14147226 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
-                        badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
-var queue42 = new Queue<string>();
+                        var queue42 = new Queue<string>();
 queue42.Enqueue(data);
 queue42.Dequeue();
 queue42.TryPeek(out var result42);
 data = result42;
+                        badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
                         {

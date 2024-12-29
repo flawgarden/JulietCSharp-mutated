@@ -86,6 +86,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06588851 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var queue42 = new Queue<string>();
+queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
+queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
+queue42.Enqueue(data);
+data = queue42.Dequeue();
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -97,11 +102,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06588851 : Abstract
             }
             catch (SqlException exceptSql)
             {
-var queue42 = new Queue<string>();
-queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
-queue42.Enqueue("cgSHM95I184XcCZ2AgmB839SNwuPl04WVOhRM");
-queue42.Enqueue(data);
-data = queue42.Dequeue();
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

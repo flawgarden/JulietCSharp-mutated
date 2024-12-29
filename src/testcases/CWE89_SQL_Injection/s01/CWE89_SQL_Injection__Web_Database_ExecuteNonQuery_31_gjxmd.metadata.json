@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/aliases",
-                "template_name": "alias_positive"
+                "template_file": "sensitivity/import/import",
+                "template_name": "import_string_module_alias_positive"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 33,
-            "end_line": 99,
+            "start_line": 35,
+            "end_line": 101,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

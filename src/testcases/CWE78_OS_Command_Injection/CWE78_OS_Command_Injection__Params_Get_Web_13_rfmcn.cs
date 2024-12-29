@@ -49,6 +49,7 @@ class MutatedCWE78_OS_Command_Injection__Params_Get_Web_13165104 : AbstractTestC
         }
 while (true) {
     data = "";
+    break;
 }
         String osCommand;
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))

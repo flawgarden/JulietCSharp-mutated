@@ -46,14 +46,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_10468773 : Abstract
                 {
                     /* setup the connection */
 
-byte[] bytes100500 = Encoding.UTF8.GetBytes(data);
-Array.Clear(bytes100500);
-var length425 = bytes100500.Length;
-IntPtr tmpBlock42 = Marshal.AllocHGlobal(length425);
-Marshal.Copy(bytes100500, 0, tmpBlock42, length425);
-Marshal.Copy(tmpBlock42, bytes100500, 0, length425);
-data = Encoding.UTF8.GetString(bytes100500);
-Marshal.FreeHGlobal(tmpBlock42);
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -66,6 +58,14 @@ Marshal.FreeHGlobal(tmpBlock42);
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                byte[] bytes100500 = Encoding.UTF8.GetBytes(data);
+Array.Clear(bytes100500);
+var length425 = bytes100500.Length;
+IntPtr tmpBlock42 = Marshal.AllocHGlobal(length425);
+Marshal.Copy(bytes100500, 0, tmpBlock42, length425);
+Marshal.Copy(tmpBlock42, bytes100500, 0, length425);
+data = Encoding.UTF8.GetString(bytes100500);
+Marshal.FreeHGlobal(tmpBlock42);
                             }
                         }
                     }

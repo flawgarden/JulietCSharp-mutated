@@ -96,11 +96,11 @@ public string getFirstString(params string[] lines) {
                     {
                         command.CommandText = "select name from users where id=0";
                         command.Prepare();
-dataBad = getFirstString("UkbuAu5TkbiFEg3JIOD5q02POkfRnJ", dataBad);
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            data = getFirstString("UkbuAu5TkbiFEg3JIOD5q02POkfRnJ", data);
                         }
                     }
                 }

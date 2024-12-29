@@ -83,15 +83,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45692349 : Abstract
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            var array139418 = new[]{ "EKQdoGidmXZakFIn7rAzJUXc3YOyXzg710Gf0STbRWgxAmE2z9xLtvytxxjP2tFx0cjt8nxoXihxyjbRTV9XBVNGBXsCtEjhQ", "iCV3MMJxKNB4NVS5guswfOdrl4u5T99gGn3O8cwL2hC2AceraICxi6bUjnSRcNeLOeykcD6E7g37LkrIaCeK7M8JLioVJfs", data };
+                            data = array139418[^2];
                         }
                     }
                 }
             }
             catch (SqlException exceptSql)
             {
-
-var array139418 = new[]{ "EKQdoGidmXZakFIn7rAzJUXc3YOyXzg710Gf0STbRWgxAmE2z9xLtvytxxjP2tFx0cjt8nxoXihxyjbRTV9XBVNGBXsCtEjhQ", "iCV3MMJxKNB4NVS5guswfOdrl4u5T99gGn3O8cwL2hC2AceraICxi6bUjnSRcNeLOeykcD6E7g37LkrIaCeK7M8JLioVJfs", dataBad };
-dataBad = array139418[^2];
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

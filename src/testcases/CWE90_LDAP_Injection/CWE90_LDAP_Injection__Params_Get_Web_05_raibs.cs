@@ -58,6 +58,7 @@ public string getFirstString(params string[] lines) {
         {
             /* POTENTIAL FLAW: Read data from a querystring using Params.Get */
             data = req.Params.Get("name");
+data = combineStrings(String.Concat("ueLVgNF0j1a68L5qjQGrK3sXxmQQisyaO4UXRm3ZpjpLmh6", String.Concat("GGP0", "36yR0D9rD1iZ6XrCkNhuQqWjQZXUIoelcEAc0SzHnz3CI3WEYEonODRNkOA")), data);
         }
         else
         {
@@ -68,7 +69,6 @@ public string getFirstString(params string[] lines) {
         using (DirectoryEntry de = new DirectoryEntry())
         {
             /* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
-data = combineStrings(String.Concat("ueLVgNF0j1a68L5qjQGrK3sXxmQQisyaO4UXRm3ZpjpLmh6", String.Concat("GGP0", "36yR0D9rD1iZ6XrCkNhuQqWjQZXUIoelcEAc0SzHnz3CI3WEYEonODRNkOA")), data);
             using (DirectorySearcher search = new DirectorySearcher(de))
             {
                 search.Filter = "(&(objectClass=user)(employeename=" + data + "))";

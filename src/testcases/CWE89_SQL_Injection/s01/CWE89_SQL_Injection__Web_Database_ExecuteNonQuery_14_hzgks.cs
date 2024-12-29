@@ -41,9 +41,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14312732 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-ICollection<string> stream42 = new List<string>();
-stream42.Add(data);
-data = stream42.Select(entry111 => "42").First();
                 try
                 {
                     /* setup the connection */
@@ -59,6 +56,9 @@ data = stream42.Select(entry111 => "42").First();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                ICollection<string> stream42 = new List<string>();
+stream42.Add(data);
+data = stream42.Select(entry111 => "42").First();
                             }
                         }
                     }

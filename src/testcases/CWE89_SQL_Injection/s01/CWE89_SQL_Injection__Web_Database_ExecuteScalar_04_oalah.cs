@@ -89,6 +89,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_04209161 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        ICollection<string> collection42 = new HashSet<string>();
+collection42.Add("Tg13iDaQ6LffDLetwi");
+var query42 =
+    from item42 in collection42
+    let res42 = item42.ToString()
+    select res42;
+data = query42.First();
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -100,13 +107,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_04209161 : Abstract
             }
             catch (SqlException exceptSql)
             {
-ICollection<string> collection42 = new HashSet<string>();
-collection42.Add("Tg13iDaQ6LffDLetwi");
-var query42 =
-    from item42 in collection42
-    let res42 = item42.ToString()
-    select res42;
-data = query42.First();
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

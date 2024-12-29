@@ -57,7 +57,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17951147 : Abstra
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-ISet<string> set111 = new SortedSet<string>();
+                            data = dr.GetString(1);
+                            ISet<string> set111 = new SortedSet<string>();
 ISet<string> set222 = new SortedSet<string>();
 set111.Add("awesome string");
 set111.Add(data);
@@ -65,7 +66,7 @@ set222.Add(data);
 if (set111.IsProperSupersetOf(set222)) {
     data = "awesome string";
 }
-                            data = dr.GetString(1);
+
                         }
                     }
                 }

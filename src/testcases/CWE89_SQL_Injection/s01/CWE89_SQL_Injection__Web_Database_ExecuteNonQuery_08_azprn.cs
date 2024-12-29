@@ -54,9 +54,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08610242 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-
-var operators1943 = new SpecialOperatorsStringHolder(data);
-data = operators1943[0, "41yLVW0iF4LvPgmWTjvi1zVyMDpeAPSkil1wXhbg4KtcjZFXi0ptbS8Ff99RrWi0lkNopz9wIOorF2Pw7R6Jk"];
                 try
                 {
                     /* setup the connection */
@@ -99,6 +96,8 @@ data = operators1943[0, "41yLVW0iF4LvPgmWTjvi1zVyMDpeAPSkil1wXhbg4KtcjZFXi0ptbS8
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var operators1943 = new SpecialOperatorsStringHolder(data);
+                        data = operators1943[0, "41yLVW0iF4LvPgmWTjvi1zVyMDpeAPSkil1wXhbg4KtcjZFXi0ptbS8Ff99RrWi0lkNopz9wIOorF2Pw7R6Jk"];
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

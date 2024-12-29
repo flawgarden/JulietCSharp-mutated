@@ -86,13 +86,13 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06753160 : Abstract
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        var regex42 = @"(a|b)";
+                        var str42 = "b";
+                        if (Regex.IsMatch(str42, regex42)) {
+                            data = "";
+                        }
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
-var regex42 = @"(a|b)";
-var str42 = "b";
-if (Regex.IsMatch(str42, regex42)) {
-    data = "";
-}
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {

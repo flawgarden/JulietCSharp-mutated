@@ -50,9 +50,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06106808 : Abstract
                 {
                     /* setup the connection */
 
-var operators1943 = new SpecialOperatorsStringHolder(data);
-var srotarepo3491 = -operators1943;
-data = srotarepo3491.ToString();
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -65,6 +62,9 @@ data = srotarepo3491.ToString();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var operators1943 = new SpecialOperatorsStringHolder(data);
+                                var srotarepo3491 = -operators1943;
+                                data = srotarepo3491.ToString();
                             }
                         }
                     }

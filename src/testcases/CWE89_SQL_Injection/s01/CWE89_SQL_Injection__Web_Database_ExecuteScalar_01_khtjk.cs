@@ -71,11 +71,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_01491006 : Abstract
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
-                    badSqlCommand.CommandText = "select * from users where name='" +data+"'";
-                    object firstCol = badSqlCommand.ExecuteScalar();
-ICollection<string> stream42 = new List<string>();
+                    ICollection<string> stream42 = new List<string>();
 stream42.Add("4Hr6KeWVSYVJmH9HiyNN3miTf8n1XW9TNX2OuS0XjR7ya0t3p2pjnTFRiYaM1e76YC5OPvWQ70ompt2oPtMfqaq4SkpW1ofETB");
 data = stream42.First();
+                    badSqlCommand.CommandText = "select * from users where name='" +data+"'";
+                    object firstCol = badSqlCommand.ExecuteScalar();
                     if (firstCol != null)
                     {
                         IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */

@@ -51,21 +51,21 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03925383 : Abstra
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
-Wrapper<string> w = new Wrapper<string>(data);
-var task = new SettingTask(w, "");
-Thread thread = new(task.run);
-thread.Start();
-try {
-  thread.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                             command.CommandText = "select name from users where id=0";
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                Wrapper<string> w = new Wrapper<string>(data);
+                                var task = new SettingTask(w, "");
+                                Thread thread = new(task.run);
+                                thread.Start();
+                                try {
+                                thread.Join();
+                                } catch (ThreadInterruptedException e) {
+                                }
+                                data = w.i;
                             }
                         }
                     }

@@ -66,7 +66,6 @@ public string simplePatternMatchingString1(object obj) {
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
-data = simplePatternMatchingString1(privateFive);
                             command.Prepare();
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
@@ -98,6 +97,7 @@ data = simplePatternMatchingString1(privateFive);
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        data = simplePatternMatchingString1(privateFive);
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)

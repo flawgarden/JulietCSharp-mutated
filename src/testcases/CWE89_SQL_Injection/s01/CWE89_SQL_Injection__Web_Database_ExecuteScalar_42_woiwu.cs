@@ -54,10 +54,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_42640063 : Abstract
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-
-var constrained09143 = new InterfaceConstrainedClass<ImplBinaryOpInterfaceClass1>(new ImplBinaryOpInterfaceClass1());
-data = constrained09143.ChooseNone(data, "HjGPzVSxfHWIMhYXDzOqB0I5lN8H5zraKGBBcYSqGSXRWH7oca3ii02RaKnmWK2pZ67GfW4oghjtd1iePTpe5I1UOt");
                             data = dr.GetString(1);
+                            var constrained09143 = new InterfaceConstrainedClass<ImplBinaryOpInterfaceClass1>(new ImplBinaryOpInterfaceClass1());
+data = constrained09143.ChooseNone(data, "HjGPzVSxfHWIMhYXDzOqB0I5lN8H5zraKGBBcYSqGSXRWH7oca3ii02RaKnmWK2pZ67GfW4oghjtd1iePTpe5I1UOt");
                         }
                     }
                 }

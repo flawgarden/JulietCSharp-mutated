@@ -78,6 +78,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17851294 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        string[] arr4124 = new string[] { "qb" };
+                        NestedFields3 nested7231 = new NestedFields3(arr4124);
+                        data = nested7231.nested1.nested1.nested1.values[0];
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -87,9 +90,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17851294 : Abstra
                         else
                         {
 
-string[] arr4124 = new string[] { "qb" };
-NestedFields3 nested7231 = new NestedFields3(arr4124);
-data = nested7231.nested1.nested1.nested1.values[0];
                             IO.WriteLine("Unable to update records for user: " + data);
                         }
                     }

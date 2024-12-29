@@ -47,7 +47,7 @@ public string getFirstString(params string[] lines) {
 }
     private void BadSink(HttpRequest req, HttpResponse resp)
     {
-dataBad = getStringWithIndex(1, dataBad, dataBad);
+dataBad = getStringWithIndex(0, dataBad, dataBad);
         string data = dataBad;
         if (data != null)
         {

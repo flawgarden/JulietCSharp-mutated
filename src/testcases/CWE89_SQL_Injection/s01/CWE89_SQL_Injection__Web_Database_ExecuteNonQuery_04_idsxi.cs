@@ -90,6 +90,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04766764 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var abstract999 = new ClassInverted();
+AClass virtual666 = (AClass)abstract999;
+data = virtual666.OverriddenPositive(data);
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -106,9 +109,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04766764 : Abstra
             catch (SqlException exceptSql)
             {
 
-var abstract999 = new ClassInverted();
-AClass virtual666 = (AClass)abstract999;
-data = virtual666.OverriddenPositive(data);
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

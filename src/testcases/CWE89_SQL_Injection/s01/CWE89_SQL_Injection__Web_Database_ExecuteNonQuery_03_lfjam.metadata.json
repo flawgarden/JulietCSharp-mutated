@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/extensionMethods",
+                "template_file": "sensitivity/cSharpAbstractions/extensionMethods",
                 "template_name": "extension_method_one_arg_positive_1"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 33,
-            "end_line": 105,
+            "start_line": 35,
+            "end_line": 107,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

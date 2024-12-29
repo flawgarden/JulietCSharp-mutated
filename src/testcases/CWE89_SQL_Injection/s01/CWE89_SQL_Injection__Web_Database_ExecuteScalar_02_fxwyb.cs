@@ -56,24 +56,24 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_02348893 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-Wrapper<string> w = new Wrapper<string>(data);
-var task1 = new SettingTask(w, "");
-var task2 = new SettingTask(w, data);
-Thread thread1 = new Thread(task1.run);
-Thread thread2 = new Thread(task2.run);
-thread2.Start();
-try {
-  thread2.Join();
-} catch (ThreadInterruptedException e) {
-}
-
-thread1.Start();
-try {
-  thread1.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                                 data = dr.GetString(1);
+                                Wrapper<string> w = new Wrapper<string>(data);
+                                var task1 = new SettingTask(w, "");
+                                var task2 = new SettingTask(w, data);
+                                Thread thread1 = new Thread(task1.run);
+                                Thread thread2 = new Thread(task2.run);
+                                thread2.Start();
+                                try {
+                                thread2.Join();
+                                } catch (ThreadInterruptedException e) {
+                                }
+
+                                thread1.Start();
+                                try {
+                                thread1.Join();
+                                } catch (ThreadInterruptedException e) {
+                                }
+                                data = w.i;
                             }
                         }
                     }

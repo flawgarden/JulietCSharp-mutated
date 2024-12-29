@@ -76,11 +76,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45962318 : Abstract
                 {
                     connection.Open();
                     /* prepare and execute a (hardcoded) query */
-var regex42 = @"42";
-var str42 = "42";
-if (Regex.IsMatch(str42, regex42)) {
-    dataBad = "";
-}
                     using (SqlCommand command = new SqlCommand(null, connection))
                     {
                         command.CommandText = "select name from users where id=0";
@@ -89,6 +84,11 @@ if (Regex.IsMatch(str42, regex42)) {
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            var regex42 = @"42";
+                            var str42 = "42";
+                            if (Regex.IsMatch(str42, regex42)) {
+                                data = "";
+                            }
                         }
                     }
                 }

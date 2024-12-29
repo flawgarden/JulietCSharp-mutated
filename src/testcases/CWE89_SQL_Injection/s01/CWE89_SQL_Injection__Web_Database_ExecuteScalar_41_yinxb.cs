@@ -68,7 +68,19 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_41774656 : Abstract
             try
             {
                 /* setup the connection */
-int counter = 0;
+                using (SqlConnection connection = IO.GetDBConnection())
+                {
+                    connection.Open();
+                    /* prepare and execute a (hardcoded) query */
+                    using (SqlCommand command = new SqlCommand(null, connection))
+                    {
+                        command.CommandText = "select name from users where id=0";
+                        command.Prepare();
+                        using (SqlDataReader dr = command.ExecuteReader())
+                        {
+                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
+                            data = dr.GetString(1);
+                            int counter = 0;
 string stringCopy = data;
 
 if (counter == 0) {
@@ -95,18 +107,6 @@ try {
   thread2.Join();
 } catch (ThreadInterruptedException e) {
 }
-                using (SqlConnection connection = IO.GetDBConnection())
-                {
-                    connection.Open();
-                    /* prepare and execute a (hardcoded) query */
-                    using (SqlCommand command = new SqlCommand(null, connection))
-                    {
-                        command.CommandText = "select name from users where id=0";
-                        command.Prepare();
-                        using (SqlDataReader dr = command.ExecuteReader())
-                        {
-                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-                            data = dr.GetString(1);
                         }
                     }
                 }

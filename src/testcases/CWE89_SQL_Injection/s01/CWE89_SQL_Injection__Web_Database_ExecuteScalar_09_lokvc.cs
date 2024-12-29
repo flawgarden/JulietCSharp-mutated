@@ -54,7 +54,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_09133742 : Abstract
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-var tmp42 = data;
+                                data = dr.GetString(1);
+                                var tmp42 = data;
 int[] tmpArray42 = [0, 1, 2, 3, 4];
 var index = -1;
 try
@@ -69,7 +70,6 @@ catch (IndexOutOfRangeException e)
 {
     data = tmp42;
 }
-                                data = dr.GetString(1);
                             }
                         }
                     }

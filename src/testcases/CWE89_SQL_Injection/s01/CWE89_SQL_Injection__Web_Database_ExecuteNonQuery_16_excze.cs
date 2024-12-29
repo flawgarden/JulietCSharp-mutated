@@ -78,6 +78,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16926687 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
+data = a12341.VirtualCall("", data);
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -86,8 +88,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16926687 : Abstra
                         }
                         else
                         {
-BaseBinaryOpClass a12341 = new DerivedBinaryOpClass1();
-data = a12341.VirtualCall("", data);
                             IO.WriteLine("Unable to update records for user: " + data);
                         }
                     }

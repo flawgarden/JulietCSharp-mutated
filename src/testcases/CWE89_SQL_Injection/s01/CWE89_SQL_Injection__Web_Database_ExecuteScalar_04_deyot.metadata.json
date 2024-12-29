@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/string_templates",
-                "template_name": "simple_string_templates_positive"
+                "template_file": "sensitivity/string_interpolation",
+                "template_name": "simple_string_interpolation_positive"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 39,
-            "end_line": 105,
+            "start_line": 41,
+            "end_line": 107,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

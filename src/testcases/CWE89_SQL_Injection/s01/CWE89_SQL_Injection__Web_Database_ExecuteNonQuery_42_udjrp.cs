@@ -42,8 +42,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_42184935 : Abstra
             {
                 /* setup the connection */
 
-Func<string, string, string> delegate0912 = (string v1, string v2) => v2;
-data = delegate0912(data, "IhpXtyUrQ52Hy60U6uv7");
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
                     connection.Open();
@@ -56,6 +54,8 @@ data = delegate0912(data, "IhpXtyUrQ52Hy60U6uv7");
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            Func<string, string, string> delegate0912 = (string v1, string v2) => v2;
+data = delegate0912(data, "IhpXtyUrQ52Hy60U6uv7");
                         }
                     }
                 }

@@ -76,15 +76,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_31648322 : Abstract
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        string[] tmpArrayUnique42 = {"", "", "", ""};
+                        tmpArrayUnique42[0] = data;
+                        ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
+                        data = ah.values[1];
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {
-string[] tmpArrayUnique42 = {"", "", "", ""};
-tmpArrayUnique42[0] = data;
-ArrayHolder ah = new ArrayHolder(tmpArrayUnique42);
-data = ah.values[1];
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */
                         }
                     }

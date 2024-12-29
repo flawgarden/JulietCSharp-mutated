@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/array",
+                "template_file": "sensitivity/slices",
                 "template_name": "array_expand_prefix_negative"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 29,
-            "end_line": 77,
+            "start_line": 31,
+            "end_line": 79,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

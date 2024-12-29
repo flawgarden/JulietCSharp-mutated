@@ -50,17 +50,17 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01759066 : Abstra
                     {
                         command.CommandText = "select name from users where id=0";
                         command.Prepare();
-ISet<string> set111 = new HashSet<string>();
+                        using (SqlDataReader dr = command.ExecuteReader())
+                        {
+                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
+                            data = dr.GetString(1);
+                            ISet<string> set111 = new HashSet<string>();
 ISet<string> set222 = new SortedSet<string>();
 set111.Add("awesome string");
 set111.Add(data);
 set222.Add("awesome string");
 set111.IntersectWith(set222);
 data = set111.First();
-                        using (SqlDataReader dr = command.ExecuteReader())
-                        {
-                            /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-                            data = dr.GetString(1);
                         }
                     }
                 }

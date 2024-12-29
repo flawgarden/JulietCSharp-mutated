@@ -48,11 +48,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11855626 : Abstra
                     {
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
-var map42 = new Dictionary<string, string>();
-map42[data] = "const string";
-if (map42.Remove(data, out var value)) {
-    data = value;
-}
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
@@ -61,6 +56,11 @@ if (map42.Remove(data, out var value)) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var map42 = new Dictionary<string, string>();
+                                map42[data] = "const string";
+                                if (map42.Remove(data, out var value)) {
+                                    data = value;
+                                }
                             }
                         }
                     }

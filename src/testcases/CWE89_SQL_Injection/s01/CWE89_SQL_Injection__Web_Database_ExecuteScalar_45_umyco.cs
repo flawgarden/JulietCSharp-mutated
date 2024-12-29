@@ -72,18 +72,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45859733 : Abstract
             try
             {
                 /* setup the connection */
-string tmpUnique42 = dataBad;
-try {
-  if (true) {
-     throw new Exception1("UN7EwNRW");
-  } else {
-     throw new Exception2("zGKm");
-  }
-} catch (Exception1 e) {
-    dataBad = "";
-} catch (Exception2 e) {
-    dataBad = "";
-}
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
                     connection.Open();
@@ -96,6 +84,18 @@ try {
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            string tmpUnique42 = dataBad;
+                            try {
+                            if (true) {
+                                throw new Exception1("UN7EwNRW");
+                            } else {
+                                throw new Exception2("zGKm");
+                            }
+                            } catch (Exception1 e) {
+                                data = "";
+                            } catch (Exception2 e) {
+                                data = "";
+                            }
                         }
                     }
                 }

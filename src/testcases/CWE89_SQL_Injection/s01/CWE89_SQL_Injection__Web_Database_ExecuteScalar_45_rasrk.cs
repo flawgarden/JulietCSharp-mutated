@@ -84,7 +84,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_45168154 : Abstract
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-
+                            data = dr.GetString(1);
 try
 {
     dynamic dynamic9871 = new ArrayHolder(dataBad);
@@ -94,7 +94,7 @@ catch (RuntimeBinderException _)
 {
     dataBad = "JG2uE";
 }
-                            data = dr.GetString(1);
+
                         }
                     }
                 }

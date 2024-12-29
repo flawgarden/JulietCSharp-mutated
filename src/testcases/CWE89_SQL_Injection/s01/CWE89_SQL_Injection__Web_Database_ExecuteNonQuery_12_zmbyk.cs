@@ -61,11 +61,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_12798542 : Abstra
                 }
                 catch (SqlException exceptSql)
                 {
-
-var array139418 = new[]{ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy", data };
-string[] array139418_2 = [ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy" ];
-string[] yarra3141 = [.. array139418, .. array139418_2 ];
-data = yarra3141[3];
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }
@@ -86,6 +81,11 @@ data = yarra3141[3];
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+
+                        var array139418 = new[]{ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy", data };
+                        string[] array139418_2 = [ "6OFEzD", "2ywlMHUn03wsHeBo3p3jXok1L14TpJjdy" ];
+                        string[] yarra3141 = [.. array139418, .. array139418_2 ];
+                        data = yarra3141[3];
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

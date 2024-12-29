@@ -24,11 +24,12 @@
             "~[MACRO_Any_string@1002]~ -> ~[VAR_string@1001]~"
         ],
         "region": {
-            "start_line": 37,
-            "end_line": 116,
+            "start_line": 39,
+            "end_line": 118,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

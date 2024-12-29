@@ -62,6 +62,10 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06102847 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var structMutated12321 = new SimpleStruct();
+structMutated12321.str = data;
+var newStruct123 = structMutated12321 with { str = "ccJVhf9lPVVqlMMXDoZnuHQyA6g6Rur4s3QT6xhWSvabFF7" };
+data = newStruct123.str;
                             }
                         }
                     }
@@ -76,11 +80,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_06102847 : Abstract
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-
-var structMutated12321 = new SimpleStruct();
-structMutated12321.str = data;
-var newStruct123 = structMutated12321 with { str = "ccJVhf9lPVVqlMMXDoZnuHQyA6g6Rur4s3QT6xhWSvabFF7" };
-data = newStruct123.str;
             data = null;
         }
         if (PRIVATE_CONST_FIVE==5)

@@ -91,9 +91,9 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+data = InterfaceConstrainedMethod<ImplBinaryOpInterfaceClass1>("zsKDenDPy963MZNMV5RtmYEguJQNWnCLji9M2IVE97Ill0cR9NK2tEAbonTUW03K7u", data);
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
 
-data = InterfaceConstrainedMethod<ImplBinaryOpInterfaceClass1>("zsKDenDPy963MZNMV5RtmYEguJQNWnCLji9M2IVE97Ill0cR9NK2tEAbonTUW03K7u", data);
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {

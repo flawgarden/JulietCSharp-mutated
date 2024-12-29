@@ -76,10 +76,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_05167524 : Abstra
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
-object tmp42 = new List<int> {1, 2, 3, 4, 5};
-if (tmp42 is ICollection<int>) {
-    data = "";
-}
+
             data = null;
         }
         if (privateTrue)
@@ -93,6 +90,10 @@ if (tmp42 is ICollection<int>) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        object tmp42 = new List<int> {1, 2, 3, 4, 5};
+if (tmp42 is ICollection<int>) {
+    data = "";
+}
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)

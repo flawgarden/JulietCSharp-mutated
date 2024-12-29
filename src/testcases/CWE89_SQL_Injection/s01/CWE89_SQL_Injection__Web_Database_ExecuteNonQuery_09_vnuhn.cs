@@ -41,12 +41,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_09835527 : Abstra
             data = ""; /* Initialize data */
             /* Read data from a database */
             {
-try {
-    string s42 = null;
-    var i42 = s42.Length;
-} catch (NullReferenceException e) {
-    data = "";
-}
+
                 try
                 {
                     /* setup the connection */
@@ -62,6 +57,12 @@ try {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                try {
+    string s42 = null;
+    var i42 = s42.Length;
+} catch (NullReferenceException e) {
+    data = "";
+}
                             }
                         }
                     }

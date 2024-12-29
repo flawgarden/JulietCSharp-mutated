@@ -60,10 +60,10 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07472485 : Abstra
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
+                                data = dr.GetString(1);
 
 var explicit15323 = new ExplicitInterfaceClass();
 data = ((INegative)explicit15323).InterfaceCall(data);
-                                data = dr.GetString(1);
                             }
                         }
                     }

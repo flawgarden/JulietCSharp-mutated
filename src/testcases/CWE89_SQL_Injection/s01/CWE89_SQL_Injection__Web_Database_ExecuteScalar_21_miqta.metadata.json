@@ -28,11 +28,12 @@
             "~[MACRO_VarName@1003]~ -> record12321"
         ],
         "region": {
-            "start_line": 36,
-            "end_line": 101,
+            "start_line": 38,
+            "end_line": 103,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

@@ -57,6 +57,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_02118242 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                dynamic dynamic9871 = data;
+                                if (dynamic9871 is string)
+                                {
+                                    data = "e0D1M2qfNJUlhqn2tBQDsgsPCoV8I93StaWwlqka";
+                                }
+                                else
+                                {
+                                    data = dynamic9871;
+                                }
                             }
                         }
                     }
@@ -72,15 +81,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_02118242 : Abstract
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
 
-dynamic dynamic9871 = data;
-if (dynamic9871 is string)
-{
-    data = "e0D1M2qfNJUlhqn2tBQDsgsPCoV8I93StaWwlqka";
-}
-else
-{
-    data = dynamic9871;
-}
             data = null;
         }
         if (true)

@@ -59,12 +59,12 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04991335 : Abstra
                         {
                             command.CommandText = "select name from users where id=0";
                             command.Prepare();
-StaticFieldHolder sfh = new StaticFieldHolder();
-data = sfh.value;
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                StaticFieldHolder sfh = new StaticFieldHolder();
+data = sfh.value;
                             }
                         }
                     }

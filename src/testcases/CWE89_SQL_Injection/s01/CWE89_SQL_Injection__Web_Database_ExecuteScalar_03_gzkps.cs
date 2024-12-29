@@ -82,6 +82,11 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03309644 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var regex42 = @"42\z";
+                        var str42 = "10042";
+                        if (Regex.IsMatch(str42, regex42)) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -93,11 +98,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03309644 : Abstract
             }
             catch (SqlException exceptSql)
             {
-var regex42 = @"42\z";
-var str42 = "10042";
-if (Regex.IsMatch(str42, regex42)) {
-    data = "";
-}
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/pm",
+                "template_file": "sensitivity/pattern-matching/instance_matching",
                 "template_name": "pattern_matching_simple_4_negative"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 56,
-            "end_line": 97,
+            "start_line": 47,
+            "end_line": 99,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

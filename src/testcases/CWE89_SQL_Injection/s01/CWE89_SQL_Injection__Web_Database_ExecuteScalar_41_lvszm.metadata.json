@@ -23,11 +23,12 @@
             " ~[EXPR_int@1001]~ -> 0b1011"
         ],
         "region": {
-            "start_line": 32,
-            "end_line": 96,
+            "start_line": 34,
+            "end_line": 98,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

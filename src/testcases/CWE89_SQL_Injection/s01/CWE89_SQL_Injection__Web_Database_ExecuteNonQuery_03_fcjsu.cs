@@ -46,13 +46,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03802331 : Abstra
                     /* setup the connection */
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
-ICollection<string> collection42 = new HashSet<string>();
-collection42.Add("H0");
-var query42 =
-    from item42 in collection42
-    from item43 in collection42
-    select item42;
-data = query42.First();
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
                         using (SqlCommand command = new SqlCommand(null, connection))
@@ -63,6 +56,13 @@ data = query42.First();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                ICollection<string> collection42 = new HashSet<string>();
+                                collection42.Add("H0");
+                                var query42 =
+                                    from item42 in collection42
+                                    from item43 in collection42
+                                    select item42;
+                                data = query42.First();
                             }
                         }
                     }

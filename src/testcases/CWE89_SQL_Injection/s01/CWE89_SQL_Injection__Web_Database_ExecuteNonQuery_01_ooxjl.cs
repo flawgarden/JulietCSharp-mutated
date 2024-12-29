@@ -42,14 +42,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01643560 : Abstra
             try
             {
                 /* setup the connection */
-ICollection<string> collection42 = new List<string>();
-collection42.Add("a");
-collection42.Add("a" + data);
-var query42 =
-    from item42 in collection42
-    orderby item42[0], item42.Length
-    select item42;
-data = query42.First();
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
                     connection.Open();
@@ -80,6 +72,14 @@ data = query42.First();
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                    ICollection<string> collection42 = new List<string>();
+                    collection42.Add("a");
+                    collection42.Add("a" + data);
+                    var query42 =
+                        from item42 in collection42
+                        orderby item42[0], item42.Length
+                        select item42;
+                    data = query42.First();
                     badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                     result = badSqlCommand.ExecuteNonQuery();
                     if (result != null)

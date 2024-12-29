@@ -43,7 +43,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45834384 : Abstra
 try {
   throw new Exception1(dataBad);
 } catch (Exception1 e) {
-    dataBad = "";
+    data = "";
 }
         int? result = null;
         try

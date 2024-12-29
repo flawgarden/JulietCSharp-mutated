@@ -68,12 +68,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_42170416 : Abstract
     public override void Bad(HttpRequest req, HttpResponse resp)
     {
         string data = BadSource(req, resp);
-for (int i = 0; i < -401109018; i++) {
-    if (false) {
-        continue;
-    }
-    data = "";
-}
         try
         {
             using (SqlConnection dbConnection = IO.GetDBConnection())
@@ -82,6 +76,12 @@ for (int i = 0; i < -401109018; i++) {
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                    for (int i = 0; i < 123; i++) {
+                        if (false) {
+                            continue;
+                        }
+                        data = "";
+                    }
                     badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                     object firstCol = badSqlCommand.ExecuteScalar();
                     if (firstCol != null)

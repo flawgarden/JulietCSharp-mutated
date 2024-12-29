@@ -71,12 +71,12 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_01814717 : Abstract
                 using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                 {
                     /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                    StringHolder sh = new StringHolder();
+data = sh.value;
                     badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                     object firstCol = badSqlCommand.ExecuteScalar();
                     if (firstCol != null)
                     {
-StringHolder sh = new StringHolder();
-data = sh.value;
                         IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */
                     }
                 }

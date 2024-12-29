@@ -95,6 +95,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_08956508 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var partial4321 = new PartialClass("VgV7TmquFBOenrppd3MfsMS4ImhgoIp9y", "YxBnPI");
+partial4321.ReassignStrTwo("YxBnPI");
+data = partial4321.StrOne;
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -107,9 +110,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_08956508 : Abstract
             catch (SqlException exceptSql)
             {
 
-var partial4321 = new PartialClass("VgV7TmquFBOenrppd3MfsMS4ImhgoIp9y", "YxBnPI");
-partial4321.ReassignStrTwo("YxBnPI");
-data = partial4321.StrOne;
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

@@ -81,6 +81,7 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_13192399 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        data = $"fixed_string";
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
@@ -92,7 +93,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_13192399 : Abstract
             }
             catch (SqlException exceptSql)
             {
-data = $"fixed_string";
                 IO.Logger.Log(NLog.LogLevel.Warn, "Error getting database connection", exceptSql);
             }
         }

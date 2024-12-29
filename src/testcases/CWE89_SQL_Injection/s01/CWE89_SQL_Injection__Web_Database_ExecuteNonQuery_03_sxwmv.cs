@@ -56,6 +56,8 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03851979 : Abstra
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var property787231 = new StringPropertyHolder("r");
+data = property787231.value;
                             }
                         }
                     }
@@ -63,8 +65,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03851979 : Abstra
                 catch (SqlException exceptSql)
                 {
 
-var property787231 = new StringPropertyHolder("r");
-data = property787231.value;
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

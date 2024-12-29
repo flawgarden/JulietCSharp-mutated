@@ -78,6 +78,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17439523 : Abstra
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteNonQuery(), which could result in SQL Injection */
+                        var copy41412 = data;
+                        data = "";
+                        RefargFunctions.LambdaRefDoNothing(copy41412, ref data);
                         badSqlCommand.CommandText = "insert into users (status) values ('updated') where name='" +data+"'";
                         result = badSqlCommand.ExecuteNonQuery();
                         if (result != null)
@@ -87,9 +90,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17439523 : Abstra
                         else
                         {
 
-var copy41412 = data;
-data = "";
-RefargFunctions.LambdaRefDoNothing(copy41412, ref data);
                             IO.WriteLine("Unable to update records for user: " + data);
                         }
                     }

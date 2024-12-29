@@ -56,6 +56,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_11656729 : Abstra
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+                            var multinterface12 = new MultipleInterfaceClass_2Neg();
+data = multinterface12.Interface2Call(data);
                         }
                     }
                 }
@@ -66,8 +68,6 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_11656729 : Abstra
                 finally
                 {
 
-var multinterface12 = new MultipleInterfaceClass_2Neg();
-data = multinterface12.Interface2Call(data);
                     if (listener != null)
                     {
                         try

@@ -55,11 +55,12 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03319718 : Abstra
                             using (SqlDataReader dr = command.ExecuteReader())
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-var tmp42 = new List<int> {1, 2, 3, 4, 5};
+
+                                data = dr.GetString(1);
+                                var tmp42 = new List<int> {1, 2, 3, 4, 5};
 if (tmp42 is [1, 2, 3, 4, 5]) {
     data = "";
 }
-                                data = dr.GetString(1);
                             }
                         }
                     }

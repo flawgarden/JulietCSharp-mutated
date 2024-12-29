@@ -98,6 +98,7 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+data = InheritanceConstrainedMethod<DerivedBinaryOpClass1, BaseBinaryOpClass>("1b", data);
                         }
                     }
                 }
@@ -105,8 +106,6 @@ private static string InheritanceConstrainedMethod<T, V>(string l, string r)
             catch (SqlException exceptSql)
             {
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
-
-data = InheritanceConstrainedMethod<DerivedBinaryOpClass1, BaseBinaryOpClass>("1b", data);
             }
         }
         BadSink(data , req, resp );

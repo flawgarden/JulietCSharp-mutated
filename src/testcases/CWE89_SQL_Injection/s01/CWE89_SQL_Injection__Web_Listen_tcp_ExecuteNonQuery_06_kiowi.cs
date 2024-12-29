@@ -60,6 +60,8 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_06440141 : Abst
                         {
                             /* POTENTIAL FLAW: Read data using a listening tcp connection */
                             data = sr.ReadLine();
+                            string tmpUnique42 = "";
+data = tmpUnique42;
                         }
                     }
                 }
@@ -69,8 +71,7 @@ class MutatedCWE89_SQL_Injection__Web_Listen_tcp_ExecuteNonQuery_06440141 : Abst
                 }
                 finally
                 {
-string tmpUnique42 = "";
-data = tmpUnique42;
+
                     if (listener != null)
                     {
                         try

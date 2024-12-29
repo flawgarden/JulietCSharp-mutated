@@ -52,14 +52,14 @@ class MutatedCWE643_Xpath_Injection__QueryString_Web_17134266 : AbstractTestCase
         {
             string xmlFile = null;
 string tmpUnique42 = "";
-switch (xmlFile) {
+switch (data) {
     case "":
         break;
     case "KiOrlO8":
-        xmlFile = "";
+        data = "";
         break;
     default:
-        xmlFile = tmpUnique42;
+        data = tmpUnique42;
         break;
 }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))

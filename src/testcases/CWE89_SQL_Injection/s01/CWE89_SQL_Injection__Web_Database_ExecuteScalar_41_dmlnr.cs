@@ -80,21 +80,21 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_41477594 : Abstract
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            Wrapper<string> w = new Wrapper<string>(data);
+                            var task = new SettingTask(w, "");
+                            Thread thread = new(task.run);
+                            thread.Start();
+                            try {
+                            thread.Join();
+                            } catch (ThreadInterruptedException e) {
+                            }
+                            data = w.i;
                         }
                     }
                 }
             }
             catch (SqlException exceptSql)
             {
-Wrapper<string> w = new Wrapper<string>(data);
-var task = new SettingTask(w, "");
-Thread thread = new(task.run);
-thread.Start();
-try {
-  thread.Join();
-} catch (ThreadInterruptedException e) {
-}
-data = w.i;
                 IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
             }
         }

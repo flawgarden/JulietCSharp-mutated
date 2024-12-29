@@ -23,11 +23,12 @@
             " ~[EXPR_int@1001]~ -> String.Compare(~[EXPR_string@1001]~, ~[EXPR_string@1002]~, ~[CONST_bool@1003]~)"
         ],
         "region": {
-            "start_line": 32,
-            "end_line": 104,
+            "start_line": 34,
+            "end_line": 106,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "fail"
     },
     "tool_results": [
         {

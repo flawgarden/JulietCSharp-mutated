@@ -81,9 +81,9 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_10165117 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
-                        badSqlCommand.CommandText = "select * from users where name='" +data+"'";
-string tmp42 = null;
+                        string tmp42 = null;
 data = (data + tmp42) ?? "";
+                        badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {

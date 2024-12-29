@@ -56,18 +56,18 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_13862053 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var map42 = new Dictionary<string, string>();
+map42[data] = data;
+map42.Clear();
+var value = "";
+map42.TryGetValue(data, out value);
+data = value;
                             }
                         }
                     }
                 }
                 catch (SqlException exceptSql)
                 {
-var map42 = new Dictionary<string, string>();
-map42[data] = data;
-map42.Clear();
-var value = "";
-map42.TryGetValue(data, out value);
-data = value;
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

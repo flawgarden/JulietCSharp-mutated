@@ -45,13 +45,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10283744 : Abstra
                 {
                     /* setup the connection */
 
-var sub1 = new EventSubscriberRewriter(data);
-var sub2 = new EventSubscriberRewriter("qbOyXGni1zzBP");
-EventEmptyRemove.OnProgress += sub1.Rewrite;
-EventEmptyRemove.OnProgress += sub2.Rewrite;
-EventEmptyRemove.OnProgress -= sub1.Rewrite;
-EventEmptyRemove.ProgressCall("qbOyXGni1zzBP");
-data = sub1.str;
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -64,6 +57,13 @@ data = sub1.str;
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var sub1 = new EventSubscriberRewriter(data);
+var sub2 = new EventSubscriberRewriter("qbOyXGni1zzBP");
+EventEmptyRemove.OnProgress += sub1.Rewrite;
+EventEmptyRemove.OnProgress += sub2.Rewrite;
+EventEmptyRemove.OnProgress -= sub1.Rewrite;
+EventEmptyRemove.ProgressCall("qbOyXGni1zzBP");
+data = sub1.str;
                             }
                         }
                     }

@@ -45,10 +45,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_15275728 : Abstract
                 try
                 {
                     /* setup the connection */
-var tmp42 = 42;
-if (tmp42 is < 50) {
-    data = "";
-}
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -87,6 +83,10 @@ if (tmp42 is < 50) {
                     dbConnection.Open();
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
+                        var tmp42 = 42;
+                        if (tmp42 is < 50) {
+                            data = "";
+                        }
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();

@@ -55,15 +55,15 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_03200465 : Abstract
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                string? tmp42 = "not null string";
+tmp42 ??= data;
+data = tmp42;
                             }
                         }
                     }
                 }
                 catch (SqlException exceptSql)
                 {
-string? tmp42 = "not null string";
-tmp42 ??= data;
-data = tmp42;
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

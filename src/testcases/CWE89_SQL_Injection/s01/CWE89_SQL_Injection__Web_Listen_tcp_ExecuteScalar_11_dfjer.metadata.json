@@ -15,17 +15,18 @@
     "mutated_file_metadata": {
         "used_templates": [
             {
-                "template_file": "sensitivity/abstraction/abstract",
+                "template_file": "sensitivity/cSharpAbstractions/abstract",
                 "template_name": "overridden_from_abstract_negative"
             }
         ],
         "used_extensions": [],
         "region": {
-            "start_line": 36,
-            "end_line": 114,
+            "start_line": 38,
+            "end_line": 116,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {

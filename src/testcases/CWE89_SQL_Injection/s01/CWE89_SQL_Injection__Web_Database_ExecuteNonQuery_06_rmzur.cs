@@ -44,7 +44,25 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_06328077 : Abstra
         string data;
         if (PRIVATE_CONST_FIVE==5)
         {
-int counter = 0;
+            data = ""; /* Initialize data */
+            /* Read data from a database */
+            {
+                try
+                {
+                    /* setup the connection */
+                    using (SqlConnection connection = IO.GetDBConnection())
+                    {
+                        connection.Open();
+                        /* prepare and execute a (hardcoded) query */
+                        using (SqlCommand command = new SqlCommand(null, connection))
+                        {
+                            command.CommandText = "select name from users where id=0";
+                            command.Prepare();
+                            using (SqlDataReader dr = command.ExecuteReader())
+                            {
+                                /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
+                                data = dr.GetString(1);
+                                int counter = 0;
 
 Thread thread1 = new Thread(() => Interlocked.Increment(ref counter));
 
@@ -67,24 +85,6 @@ try {
 if (counter == 2) {
   data = "";
 }
-            data = ""; /* Initialize data */
-            /* Read data from a database */
-            {
-                try
-                {
-                    /* setup the connection */
-                    using (SqlConnection connection = IO.GetDBConnection())
-                    {
-                        connection.Open();
-                        /* prepare and execute a (hardcoded) query */
-                        using (SqlCommand command = new SqlCommand(null, connection))
-                        {
-                            command.CommandText = "select name from users where id=0";
-                            command.Prepare();
-                            using (SqlDataReader dr = command.ExecuteReader())
-                            {
-                                /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
-                                data = dr.GetString(1);
                             }
                         }
                     }

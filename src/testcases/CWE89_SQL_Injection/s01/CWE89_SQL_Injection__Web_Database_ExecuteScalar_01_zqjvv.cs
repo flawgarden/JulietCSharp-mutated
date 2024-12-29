@@ -44,8 +44,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_01962176 : Abstract
                 /* setup the connection */
                 using (SqlConnection connection = IO.GetDBConnection())
                 {
-BaseBinaryOpClass a12341 = new BaseBinaryOpClass();
-data = a12341.VirtualCall(data, data);
                     connection.Open();
                     /* prepare and execute a (hardcoded) query */
                     using (SqlCommand command = new SqlCommand(null, connection))
@@ -56,6 +54,8 @@ data = a12341.VirtualCall(data, data);
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            BaseBinaryOpClass a12341 = new BaseBinaryOpClass();
+data = a12341.VirtualCall(data, data);
                         }
                     }
                 }

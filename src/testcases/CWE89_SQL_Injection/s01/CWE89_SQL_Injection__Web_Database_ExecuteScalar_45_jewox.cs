@@ -100,11 +100,11 @@ public string paramOrEmpty(int value, string param) {
                     {
                         command.CommandText = "select name from users where id=0";
                         command.Prepare();
-dataBad = paramOrEmptyMutual2(dataBad.Length, dataBad);
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            data = paramOrEmptyMutual2(data.Length, data);
                         }
                     }
                 }

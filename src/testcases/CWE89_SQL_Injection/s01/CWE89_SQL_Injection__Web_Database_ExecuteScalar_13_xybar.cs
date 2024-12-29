@@ -82,14 +82,14 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_13343071 : Abstract
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        string[] arr4124 = new string[] { "i5OlHyLAyH7Gh3wND1Zo0" };
+NestedFields1 nested7231 = new NestedFields1(arr4124);
+data = nested7231.nested1.values[0];
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)
                         {
 
-string[] arr4124 = new string[] { "i5OlHyLAyH7Gh3wND1Zo0" };
-NestedFields1 nested7231 = new NestedFields1(arr4124);
-data = nested7231.nested1.values[0];
                             IO.WriteLine(firstCol.ToString()); /* Use ResultSet in some way */
                         }
                     }

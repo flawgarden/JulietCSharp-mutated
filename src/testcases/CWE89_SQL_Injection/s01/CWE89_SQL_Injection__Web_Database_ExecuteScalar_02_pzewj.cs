@@ -66,13 +66,13 @@ public string simplePatternMatchingString1(object obj) {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                data = simplePatternMatchingString1("GxbdDrAHk99iGCJpAFXaoykbEfXAVNly5gRzgyTV1TYyp9pz2pBaiiQSM9YiU9wWYKmkvUJLwCiUZwvEziIpLKQXQ8n");
                             }
                         }
                     }
                 }
                 catch (SqlException exceptSql)
                 {
-data = simplePatternMatchingString1("GxbdDrAHk99iGCJpAFXaoykbEfXAVNly5gRzgyTV1TYyp9pz2pBaiiQSM9YiU9wWYKmkvUJLwCiUZwvEziIpLKQXQ8n");
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }

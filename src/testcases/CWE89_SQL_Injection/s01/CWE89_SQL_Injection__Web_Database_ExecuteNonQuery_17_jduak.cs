@@ -61,7 +61,6 @@ IEnumerable<string> YieldId(string x) {
                 {
                     connection.Open();
                     /* prepare and execute a (hardcoded) query */
-data = YieldMultiple(data, "42").Last();
                     using (SqlCommand command = new SqlCommand(null, connection))
                     {
                         command.CommandText = "select name from users where id=0";
@@ -70,6 +69,7 @@ data = YieldMultiple(data, "42").Last();
                         {
                             /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                             data = dr.GetString(1);
+                            data = YieldMultiple(data, "42").Last();
                         }
                     }
                 }

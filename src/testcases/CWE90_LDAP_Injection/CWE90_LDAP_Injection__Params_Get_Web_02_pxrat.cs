@@ -61,7 +61,7 @@ public string getFirstString(params string[] lines) {
         using (DirectoryEntry de = new DirectoryEntry())
         {
             /* POTENTIAL FLAW: data concatenated into LDAP search, which could result in LDAP Injection */
-data = varargsWithGenerics(String.Intern(data), "2NB47EJmdLm0UdMNRbQjrogJqz6CUI794QdyaE668UU");
+data = varargsWithGenerics(data, "2NB47EJmdLm0UdMNRbQjrogJqz6CUI794QdyaE668UU");
             using (DirectorySearcher search = new DirectorySearcher(de))
             {
                 search.Filter = "(&(objectClass=user)(employeename=" + data + "))";

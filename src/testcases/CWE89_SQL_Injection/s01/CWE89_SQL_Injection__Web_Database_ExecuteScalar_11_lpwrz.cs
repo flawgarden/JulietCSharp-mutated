@@ -62,11 +62,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteScalar_11145752 : Abstract
                 }
                 catch (SqlException exceptSql)
                 {
-var regex42 = @"abc";
-var str42 = "AbC";
-if (Regex.IsMatch(str42, regex42, RegexOptions.IgnoreCase)) {
-    data = "";
-}
                     IO.Logger.Log(NLog.LogLevel.Warn, exceptSql, "Error with SQL statement");
                 }
             }
@@ -87,6 +82,11 @@ if (Regex.IsMatch(str42, regex42, RegexOptions.IgnoreCase)) {
                     using (SqlCommand badSqlCommand = new SqlCommand(null, dbConnection))
                     {
                         /* POTENTIAL FLAW: data concatenated into SQL statement used in ExecuteScalar(), which could result in SQL Injection */
+                        var regex42 = @"abc";
+                        var str42 = "AbC";
+                        if (Regex.IsMatch(str42, regex42, RegexOptions.IgnoreCase)) {
+                            data = "";
+                        }
                         badSqlCommand.CommandText = "select * from users where name='" +data+"'";
                         object firstCol = badSqlCommand.ExecuteScalar();
                         if (firstCol != null)

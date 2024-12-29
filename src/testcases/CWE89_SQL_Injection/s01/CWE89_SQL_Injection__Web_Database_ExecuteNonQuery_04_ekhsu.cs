@@ -51,11 +51,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04803874 : Abstra
                 try
                 {
                     /* setup the connection */
-var tmp42 = new Point(42, -42);
-data = tmp42 switch {
-    (42, -42) => "",
-    _ => data
-};
                     using (SqlConnection connection = IO.GetDBConnection())
                     {
                         connection.Open();
@@ -68,6 +63,11 @@ data = tmp42 switch {
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                var tmp42 = new Point(42, -42);
+                                data = tmp42 switch {
+                                    (42, -42) => "",
+                                    _ => data
+                                };
                             }
                         }
                     }

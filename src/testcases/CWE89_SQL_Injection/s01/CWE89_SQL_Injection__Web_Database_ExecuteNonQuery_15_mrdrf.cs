@@ -48,8 +48,6 @@ class MutatedCWE89_SQL_Injection__Web_Database_ExecuteNonQuery_15546574 : Abstra
                     {
                         connection.Open();
                         /* prepare and execute a (hardcoded) query */
-Func<string> lazyValue = () => "";
-data = lazyValue();
                         using (SqlCommand command = new SqlCommand(null, connection))
                         {
                             command.CommandText = "select name from users where id=0";
@@ -58,6 +56,8 @@ data = lazyValue();
                             {
                                 /* POTENTIAL FLAW: Read data from a database query SqlDataReader */
                                 data = dr.GetString(1);
+                                Func<string> lazyValue = () => "";
+data = lazyValue();
                             }
                         }
                     }

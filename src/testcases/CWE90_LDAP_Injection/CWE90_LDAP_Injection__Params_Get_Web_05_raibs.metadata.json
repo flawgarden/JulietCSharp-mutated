@@ -24,11 +24,12 @@
             "~[EXPR_string@1002]~ -> String.Concat(~[EXPR_string@1001]~, ~[EXPR_string@1002]~)"
         ],
         "region": {
-            "start_line": 39,
-            "end_line": 79,
+            "start_line": 41,
+            "end_line": 81,
             "start_column": null,
             "end_column": null
-        }
+        },
+        "kind": "pass"
     },
     "tool_results": [
         {
